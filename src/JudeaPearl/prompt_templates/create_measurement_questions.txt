@@ -1,0 +1,47 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}", 
+and if the variable is not continuous, these explicit possible outcome levels: "{{ levels }}".
+We now must gather the information about this variable by speaking with the agents after the scenario has completed.
+What are the post-scenario questions that need to be asked to get the value of this variable and who are the agents that need to be asked each question?
+We are going to use these exact questions to ask the agents what the values are, so please make them clear and easy to understand since they won't be able to ask clarifying questions.
+A few things to remember in your response:
+1. If there is a scale, it must be obvious what the qualitative associations are with the top and bottom of the scale so the agent can answer the question without confusion.
+2. The explanation of your questions must include how that question (or a combination of those questions) will explicitly lead to aquiring the variable quantity.
+3. If the quantity of the variable can be obtained by reading the text transcript of the agents conversation from the scenario, you should just indicate the agent as 'oracle'.
+In this case, you should specify your question towards an external person who can read the transcript for you and provide information from it.
+The oracle only has access to the transcript, and does not have access to outside information or the inner thoughts of the agents.
+4. You must specify how the information from the questions will be quantitatively aggregated.
+5. If the variable requires multiple questions to quantitatively determine the value, then the aggregation method must limited to combining the answers to the questions with a set of simple mathematical operations (although you should describe them in depth verbally). 
+These are the minimum, the maximum, the average, the mode, the median, or the sum of a list of values. 
+Do not include any other method to aggregate answers to multiple questions. 
+If there is only one question needed to get the value, then the aggregation of multiple values does not matter since we can take the value from that question directly without anything else.
+6. Your questions and aggregation methods must be final - you will not have the opportunity to ask more questions or aggregate information in different ways.
+7. Agents and the oracle also have perfect memories, always answer honestly, and are forced to answer all questions.
+8. The transcription is always perfect and their are never recording errors.
+9. Try not to ask too many questions, but ask all the necessary questions for getting all measurements for the variable that are necessary for data analysis and statistical identification.
+10. In a similar vein, if you do ask multiple agents (or the oracle) questions, you cannot ask more than one question to a single agent (or the oracle).
+This means if there are 3 agents in the scenario, then you can ask up to 4 questions (including the oracle) and each question can only be for one agent.
+Ask stated earlier though, you should try to ask as few questions as you can.
+11. Even if there is no aggregation needed, it must be obvious how to translate the question answer to a value. 
+For example, if the variable is "amount of money" and it's ordinal with levels ["low", "med", "high"], and the question is "how much money was it?",
+then the aggregation method must describe how the levels map to the possible answer to the question for every single level.
+For example, the question should not be "how much money was it on a scale from low to high", but should be "how much money was it - please respond with low, medium or high" since this highlights all the values and the only acceptable answers are the categories.
+Note that if the variable is reported on a likert scale, like "the amount of money on a scale from 1-7", then it's okay to just as "How would you rate the amount of money on a scale from 1-7" as this is obviously inclusive of all possible answers.
+12. Since the agents will always answer truthfully, if the question is something an agent should know the answer to, it's better to ask the agent directly then trying to ask the oracle since they can both remember things they said, and answer questions about personal information that they didn't explicitly say.
+For example, if the scenario is "two people bargaining over a mug" and the variable is "whether a deal occured", you can just ask the buyer or the seller "did you make a deal for the mug?" instead of asking the oracle.
+13. You should ask one question unless it is impossible to get the information with more questions. 
+This is very important, only ask more than one question if it is absolutely necessary.
+14. One case where it is impossible to get the information without more questions is if the variable is an average or a sum.
+In that case, there must be one question for each individual value that is need.
+One question - one value is a rule you cannot break.
+You cannot ask for a list of values.
+Format your response as a json in this form and remember that there should be a key for each agent (their exact name) if they are asked a question, an "aggregation" key and an "explanation" key:
+{{ '{' }}"agent 1": ["question 1 for agent named in key", "question 2 for agent named in key", "question 3 for agent named in key"],
+"agent 2": ["question 1 for agent named in key", "question 2 for agent named in key", "question 3 for agent named in key"],
+"aggregation": "how the info from the question(s) will be aggregated. If there is  one question, this should say that no aggregation is necesaary. Otherwise if there is more than one question it must be the minimum, the maximum, the average, the mode, the median, or the sum of the questions",
+"explanation": "short explanation for agent(s), question(s), and aggregation"
+{{ '}' }}

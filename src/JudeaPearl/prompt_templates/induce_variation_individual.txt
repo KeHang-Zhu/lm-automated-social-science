@@ -1,0 +1,50 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We are trying to measure the effect of changing {{ variable_name }} on the following variable(s): {{ descendant_outcomes }}.
+We have also identified the following possible covariate(s): {{ covariates }}.
+Your task is to induce variation through a single attribute of the agent that maps to one of variable's possible levels: {{ levels }}.
+Your task has 3 parts.
+1. You must choose the agent that is relevant for inducing the variation of the variable's levels for the attribute you will generate.
+2. You must endow the agent you selected in step 1 with a single attribute that you generate that does not conflict with attributes that might affect the covariate(s).
+For example, if the scenario is "negotiating to buy a car", the relevant outcome variable is "price of the deal",
+the variable we want to induce variation on is "financial resources of the buyer", and the levels of the variable are: ["0-20,000", "20,001-40,000", "40,001-60,000", "60,001 and above", "80,001 and above"],
+then a good attribute to endow the agent would be "annual income" and one could induce variation by giving 4 simulations of the buyer agent (there are four levels of the variable accordingly) the following "annual income":
+one buyer instance would "annual income":"10,000", another buyer "annual income":"25,000", another buyer "annual income":"55,000" and another buyer "annual income":"75,000".
+The attributes will be given to the agents before the simulation, so if the attributes induced variation is about a current state of being, the wording should be in the present tense.
+The agent does not know about the operationalization, outcome variable, or any other parts of the simulation besides the scenario description and the other agents.
+So it must be clear what the attribute means without context to a normal human as the attributes will be given directly to the agent to participate in the simulation.
+The name of the attribute should not reference the agent in the 3rd person since we will be telling the agents their attributes directly.
+For example, if the scenario is "negotiating to buy a car", the relevant outcome variable is "price of the deal", and the variable we want to induce variation on is "financial resources of the buyer",
+the attribute name should not be "buyer's annual income", but could be "your annual income" or "annual income".
+3. You must map the levels the variable we are interested in measuring directly to the possible endowment values for the attribute.
+If the levels of values have a range for the variation, you must choose one value in each range for that level. 
+For example, the induced variation for your annual income should not be: "annual income": ["0-20,000", "20,001-40,000", "40,001-60,000", "60,001-80,000", "80,001 and above"], but could be: "annual income": ["15,000", "35,000", "50,000", "62,0000", "100,000"]
+If the levels are a scale that corresponds to an ordinal variable, the induced variation should be in terms of words that associate to the variable and not the number of the scale.
+This is extremely important because it does not make sense to tell a human that a car is "car qaulity level 3" without context---AND THE AGENT WILL NOT BE PROVIDED ANY OTHER CONTEXT BESIDES YOUR RESPONSE.
+For example, the induced variation for a car quality scale from 1-3 where 1 is low quality and 3 is high quality should not be: "car quality level":["1","2","3"], but should be: "car quality level":["bad","decent","good"] "car quality level":["1","2","3"] does not makes sense if the agent does not know what the numbers stand for.
+The number of possible values for the attribute must be the same as the number of levels of the variable. That is, there must be one and only one attribute value for each variable.
+A good rule of thumb is that numerical descriptions should only be used to induce variation for continuous variables and count variables.
+Remember that mapping the variable levels to the induced variation of the attribute must make sense to the agent without context.
+For example, if the scenario is "a person is interviewing for a job" and the variable is "job candidate's qualifications",
+with the variable operationalized as: "the job candidate's qualifications are operationalized as the sum of the years of relevant experience, number of relevant certifications achieved, as well as degrees completed in the relevant field",
+and these possible levels: ['0-10', '11-20', '21-30', '31-40', '41 and above'], then it does not make sense to have the attribute and its values be "your total qualification units", ["5", "15", "25", "35", "45"]
+because this does not make sense without context for the human agent. 
+Remember that the order of the attribute values must be in line with the order of the levels: {{levels}} so that we can easily map between them.
+Instead of "qualification units" (which would be a bad choice for an attribute name), you would want to choose just one attribute like "years of relevant experience", "number of certifications" or "degrees completed" and then choose values accordingly.
+A few things to remember:
+1. The attributes values must be the same type (continuous, ordinal, binary, or count) as the "{{ variable_name }}". This is extremely important - don't break this rule.
+2. You can ususally make the attribute a very similar phrase to the original variable.
+For example, if the variable is "the buyer's budget" and is continuous in dollars, then you shouldn't make the attribute "your disposable income" or "your extra money", you should just make it "your budget" since this is close to the variable as possible in the same units.
+3. If the varialbe is about one agent's opinion or impression of the other, then the attribute shoud specify this.
+For example, if the variable is "the buyer's  initial impression of the seller", then attribute should be "your initial impression of the seller" and the varied agent is the buyer since it's the buyer's impression.
+4. If the variable is continuous or count, please choose at least 7 attribute values so that we can get a full picture of the variable.
+Remember that the attribute values must correspond to the same type as the original variable {{variable_name}}, which is: "{{ variable_type }}".
+Format your response as a JSON dictionary.
+{{ '{' }}"attribute_name":"name of the attribute",
+"attribute_values": ["list of values that correspond to the appropriate variable type: {{ variable_type }}"],
+"varied_agent": "name of the agent given the attribute to vary",
+"explanation": "short explanation for all choices including how the attribute correspond to the correct data type for the variable, which is in this case: {{variable_type}} {{ '}' }}

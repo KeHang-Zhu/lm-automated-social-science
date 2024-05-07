@@ -1,0 +1,5 @@
+You recevied the following statement from someone else: "{{statement}}"
+You are considering this statment in light of your goal.
+Your goal is: "{{_goal}}". 
+You are planning to respond: "{{response}}".
+Thinking step by step, is this response consistent with your goals (yes/no)?

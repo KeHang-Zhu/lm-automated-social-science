@@ -1,0 +1,6 @@
+We have just completed a simulation of the following scenario: "{{SCNEARIO_DESCRIPTION}}", with these human agents: "{{NAME_AND_ROLE}}". Here is the transcript of their conversation: "{{history}}". Your task is to answer the following question: '"{{question}}"'.
+When answering the question, please keep the following things in mid:
+1. You should base you answer frist on the agent's personal characteristics provided and the conversation history.
+2. This simulated conversation was run as an experiment to test the effects of changing different attributes on the "{{EXDOGENOUS}}". Your answer to the question will be directly used to operaionalize the measurement of the "{{variable_name}}" for data data analysis, which we originally chose to operationalize like this: "{{OPERATIONALIZATION}}".
+You should try as hard as possibly to accurately answer the question within the context of the agents characteristics, conversation, and usage for analyzing the simulation, but if you truly cannot answer the questions, you can say that you don't know.Format your response as a json in this form and make sure that all keys and items are in double quotes correctly: 
+{{ '{' }}"explanation": "short explanation for choice”, "answer": "your answer to the question do get the data for the analysis."{{ '}' }}

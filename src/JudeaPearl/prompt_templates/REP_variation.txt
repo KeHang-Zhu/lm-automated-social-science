@@ -1,0 +1,12 @@
+You have just supplied the following response: "{{previous_response}}" to the task in triple backticks below. 
+With this response in mind please double check to make sure you have followed the guidelines presented by the original question.
+In particular, you should make sure to pay attention to the following, which is often easy to mess up and you must fix: if the levels are a scale that corresponds to an ordinal variable, the induced variation should be in terms of words that associate to the variable and not the number of the scale.
+This is extremely important because it does not make sense to tell a human that a car is "car qaulity level 3" without context---AND THE AGENT WILL NOT BE PROVIDED ANY OTHER CONTEXT BESIDES YOUR RESPONSE.
+For example, the induced variation for a car quality scale from 1-3 where 1 is low quality and 3 is high quality should not be: "car quality level":["1","2","3"], but should be: "car quality level":["bad","decent","good"] "car quality level":["1","2","3"] does not makes sense if the agent does not know what the numbers stand for.
+With this response in mind and these additional directions please double check to make sure you have followed the guidelines presented by the original question.
+It is very important that all of the instructions within the triple backticks are followed.
+If you beleive that your response is satisfactory with the original question, just output your same response again in the correct format.
+However, the question was quite complicated so it might make sense to provide a better response that is more inline with task below:
+```
+{{previous_prompt}}
+```

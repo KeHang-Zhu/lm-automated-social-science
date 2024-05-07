@@ -1,0 +1,36 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We are trying to measure the effect of changing {{ variable_name }} on the following variable(s): {{ descendant_outcomes }}.
+How would we operationalize the variable: "{{ variable_name }}" such that it would be easy to induce variation in that variable as the treatment in an experiment?
+Since we want to know about the causal effects of the "{{ variable_name }}", the operationalization needs to be something that is determined BEFORE the scenario begins since we want to vary them experimentally to determine causal effects.
+You should state how it is determined, just how it is going to be measured - you can assume it's already determined.
+Some important things to note:
+1. The transcript of the scenario will be recorded in text and we can ask the agents questions after the scenario has completed, but there is no other way to gather information about the variable.
+2. You must select only one way to operationalize the variable.
+3. The operationalization must be explicit about how the variable is quantified.
+4. The operationalization must be explicit about how the quantity is obtained, but not overly specific such that it has false negatives
+That is, it must be clear where the final quantity is obtained such that someone could replicate the measurement of the quantity easily, but also reasonably.
+For example, if the scenario is "two people bargaining over a mug" and the outcome is "whether a deal occurs", then the operationalization should be something like "a binary variable that is 1 when a deal occurs and 0 otherwise".
+It should not just be "a binary variable that is 1 when the word 'deal' is used", because a deal can occur with many different types of wordings.
+5. The operationalization must translate the variable into a quantity that is singularly defined as binary, continuous, count, ordinal; it cannot belong to more than one of those categories when quantified because we have to choose how to analyze it.
+Remember that Ordinal variables are categorical variables with an order. 
+All variables must have some sort of ordering.
+For example, if a variable is operationalized in categories that are increasing/decreasing like "low", "medium", "high", or "small", "medium", "large", then it is ordinal.
+But if it is operationalized as some sort of continuous number, like an amount of money, it's continuous.
+6. If a variable is ordinal, it cannot be measured on a scale - all possible values must be explitly determined for operationalization.
+For example, if the variable is "level of happiness", then it should not be operationalized as a "scale of happiness from 1-7", but should be operationalized by ordinal categories of like this: "very unhappy", "unhappy", "neutral", "happy", "very happy".
+The number of categories is up to your discretion, but it shouldn't generally be more than 5.
+7. An operationalization and measurement of a variable cannot be based on an external set of rules or an external rubric.
+For example, if the variable "knowledge of the surgical procedure" and the operationalization was "the number of correct steps taken in the procedure",
+then every possible correct step must be defined. The steps cannot be according to some standard list that is not fully explained - you must describe the steps.
+8. If the variable is ordinal make sure that it's operationalized with at least 5 different variation levels.
+9. Some variables might not need much operationalization.
+For example, if the variable is "the buyer's budget", the operationalization is just the amount of money the buyer has for their budget.
+10. It is extremely important to remember that the operationalizational measurement MUST be determined before the scenario and it should be clear how it's going to be varied.
+11. The method to vary simply has to highlight the values that will be used from the operationalization to vary the variable, not how to do this variation.
+Note that the method to vary must use the values that are consistent with the variable type (e.g. ordinal, count, continous, binary) from ther operationalization.
+Respond with a JSON in the following format and make sure that all keys and items are in double quotes correctly:
+{{ '{' }}"explanation": "short explanation of operationalization and method of obtaining quantity",
+"operationalization": "description of single operationalization",
+"method_to_vary": "description of the method"{{ '}' }}

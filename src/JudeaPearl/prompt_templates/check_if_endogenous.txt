@@ -1,0 +1,19 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We are trying to determine if it is possible to run an experiment and we need to determine if this variable can be adjusted during the experiment or if it's only realized during the experiment.
+For example, if the variable is "number of times a person speaks", then this is realized during the scenario.
+If the variable is "the person's mood", then this is realized before the scenario since they will have some sort of mood going in.
+Is the value of "{{ variable_name }}" determined before or during the simulation of the scenario?
+You should base your decision of how the variable is operationalized in the context of the scenario.
+A few things to note:
+1. All attributes of agents are determined before the scenario.
+These attributes include buyer skills, experiences and emotions.
+For example, if a variable is operationalized as asking the agent their preferences and those preferences could be determined before, then the attribute was determiend before.
+2. If it's ambiguous whether the variable is determiend before or after the scenario, you should defualt to assuming it's determined before.
+Respond with a JSON in the following format:
+{{ '{' }}"when_determined": "choice of before or during",
+"explanation": "short explanation of choice"{{ '}' }}

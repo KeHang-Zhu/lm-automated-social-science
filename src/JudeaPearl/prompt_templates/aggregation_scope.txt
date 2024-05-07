@@ -1,0 +1,88 @@
+is the aggregation occuring accross or between questions/
+
+@remember('simple', 'complete')
+    def make_public_statement(self, counterparties, scenario_description, history = None):
+        group_knowledge = [self.public_knowledge(counterparty) for counterparty in counterparties]
+        # prompt = f"""
+        # {self.current_context()}
+        # You are making a statement to a group of people, with following attributes: {group_knowledge}.
+        # Please remember that all information that you wish to communicate must be stated directly to the other people you are speaking with.
+        # Your statement:
+        # """
+        prompt = f"""
+        You are currently participating in a conversation in this scenario {scenario_description}. The other people participating in the scenario have these roles and names: {group_knowledge}. 
+        {self.current_context(history)}. It is your turn to speak.
+        Please remember that all information that you wish to communicate must be stated directly to the other people you are speaking with. “You should be concise and focus on accomplishing your goal within your constraints in the conversation.
+        Limit your reponse to less than 100 words!
+        provide your natural response to this conversation without any other text:
+        """
+        statement = self.call_llm(prompt)
+        is_rational = self.is_rational(statement, history)
+        return {'statement':statement, 'is_rational': is_rational}
+
+##################  
+
+
+def current_context(self, verbose=False, history = None):
+        context = f"""You are {self.attributes['your role is']} named {self.attributes['your name']} with the following characteristics: 
+        {dict_to_string(self.attributes)}.
+        Your goal in this scenario is {self._goal}. 
+        You have the following constraints on your behavior: {self._constraint}.
+       Here is the conversation in the scenario so far: {list_to_string(history)}.
+        """
+        if verbose:
+            print(context)
+        return context 
+
+
+##################   
+
+@remember('complete')
+    def final_context(self, history):
+        return f"""
+        You are person with the following characteristics: 
+        {dict_to_string(self.attributes)}.
+        Your goal is {self._goal}. 
+        You have just participated in this conversation: {list_to_string(history)}.
+        """
+##################   
+
+
+@remember('complete')
+    def survey(self, question, history):
+        context = self.final_context(history)
+        prompt = f"""{context}
+        Please answer the following question with respect to your characteristics and past interactions. Here is the question: '{question}'
+        You must report and disclose your actual answer.
+        Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+        {{"answer": "your answer",
+        "explanation": "short explanation for choice”}}
+        """
+        # an auction for a single contract with many bidders
+        
+        return self.call_llm(prompt)
+
+
+##################   
+prompt = f"""
+You are an oracle. 
+You are simulating the scenario {scenario}, with these agents {group_knowledge} and their interaction {list_to_string(history)}. 
+You want to collect data about the metric {end_condition}.
+ Should the scenario continue? Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+{"explanation": "short explanation for choice of whether or not to continue",
+"answer": "yes or no"}"""
+
+
+##################
+
+context = f"""
+You are the oracle.
+You have recently watched a social interaction. {history}
+"""   
+prompt = f"""{context}
+How do you respond to the following question: {question}
+Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+{{"answer": "your answer",
+"explanation": "short explanation for choice”}}"""
+
+##################

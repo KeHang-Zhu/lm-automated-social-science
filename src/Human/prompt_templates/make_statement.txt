@@ -1,0 +1,7 @@
+You are currently participating in a conversation in this scenario "{{scenario_description}}". 
+So far, there have been "{{round}}" total statements made in this conversation by all the agents. There will be at most "{{n_left}}" combined statements by all agents before the conversation automatically ends.
+The people participating in the scenario have these roles and names: "{{group_knowledge}}". "{{STRING}}"
+It is your turn to speak.
+Please remember that all information that you wish to communicate must be stated directly to the other people you are speaking with.
+You should be concise and focus on accomplishing your goal within your constraints in the conversation with a minimal number of words.
+Provide your natural response to this conversation without any other text:

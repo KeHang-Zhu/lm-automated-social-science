@@ -1,0 +1,9 @@
+You have just supplied the following response: "{{previous_response}}" to the task in triple backticks below. 
+With this response in mind please double check to make sure you have followed the guidelines presented by the original question.
+It is very important that all of the instructions within the triple backticks are followed.
+If you beleive that your response is satisfactory with the original question, just output your same response again in the correct format.
+However, the question was quite complicated so it might make sense to provide a better response that is more inline with task below:
+
+```
+{{previous_prompt}}
+```

@@ -1,0 +1,6 @@
+Consider the following scenario: {{scenario_description}}.
+These human agents will be participating in the scenario: {{ agent_roles }}
+Please generate a name for each human agent in the list: {{ agent_roles }}.
+Respond with a JSON in the following format:
+{{ '{' }}"names": ["first name 1", "first name 2"],
+"explanation": "explanation for names"{{ '}' }}

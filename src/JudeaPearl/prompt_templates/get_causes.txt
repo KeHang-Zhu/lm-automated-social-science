@@ -1,0 +1,39 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are interested in the causes that affect the outcome variable "{{ variable_name }}", 
+from simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+These are other outcome variables that we are considering measuring after the simulation: "{{ descendant_outcomes }}"
+We are building a Structural Causal Model, and these are the variables that we already have in our model: "{{ possible_covariates }}"
+What is/are {{ num_causes }} cause(s) that could affect {{ variable_name }} in this scenario?
+A few things to note:
+1. We have decided to operationalize {{ variable_name }} and measure its quantity in the following way: "{{ operationalization }}",
+so please make sure to keep this in mind when generating causes.
+2. Causes must be new variables in are model, they should not already be in the list of outcomes: "{{ descendant_outcomes }}" or variables already in the model: "{{ possible_covariates }}"
+3. These causes should not be explicitly directional. 
+For example, if the scenario is "negotiating to buy a car" and the outcome is "price of the deal",
+an example cause should not be the "high level of income for the buyer", but should be "buyer's income".
+4. Causes must refer to a single agent in the scenario or the scenario as a whole, but cannot refer to more than one agent.
+The causes must explicitly specify that agent by name.
+For example, if the scenario is "negotiating to buy a car", and the outcome is "price of the deal",
+a cause should not be the "The moods of the buyer and seller", but should be "the mood of the buyer" or "the mood of the seller."
+Another example is that if the scenario is "an auction for a contract with many bidders" and the outcome variable is "number of bids", then a cause should not be "number of happy bidders" because this refers to multiple agents in the cause.
+Another example is that if the scenario is "an auction for a contract with many bidders", the outcome variable is "profit of the contract owner", 
+and the agents in the scenario are ['auctioneer', 'bidder 1', 'bidder 2', 'contract owner'] then a cause should not be "bidders' financial resources" or "bidder's annual income" since these examples either reference multiple agents or it's unclear which agent they reference.
+Instead, some valid causes are "bidder 1's financial resources" or "annual income for bidder 2".
+An example of a cause about the entire scenario:
+if the scenario is "two people bargainging over a mug" and the outcome variable is "price of the deal", then a cause about the scenario could be "age of the mug" as this is about the scenario as a whole and not multiple agents.
+5. Causes should not refer to multiple values.
+For example, if the scenario is "a family discussing vacation destinations" and the outcome variable is "the final choice of vacation",
+a cause should not be "the mother's preferences" because that's refering to a plurality of causes, but could be something like "the mother's first preference" or "the mother's preference for the final choice".
+6. Causes should generally be determined before the scenario in case we want to vary them experimentally to determine causal effects.
+7. Causes shouldn't be too complicated. They should be simple to operationalize and quantify.
+8. A cause cannot refer to the number of agents in a scenario as that is about multiple agents.
+9. A cause cannot refer to any humans that are not the human agents in the scenario: "{{ relevant_agents }}".
+For example, "the presence of other agents" cannot be a cause. 
+The agents in the scenario will always be in the scenario and no agents can be added or taken away.
+10. A cause cannot refer to multiple agents' preferences, only individual agents or the scenario.
+For example, if the scenario is "a family discussing vacation destinations" and the outcome is "choice of destination", then a cause cannot be "preferences of the parents".
+The cause could be "preferences of the mother" or "family's previous destinations" as these are about individual or the scenario as a whole (all agents).
+Another way to think about this is that causes must refer to one agent or all agents, but nothing in between.
+Respond with a json in the following format:
+{{ '{' }}"causes": ["cause 1", "cause 2"],
+"explanation": "short explanation of causes"{{ '}' }}

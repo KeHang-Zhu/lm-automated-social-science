@@ -1,0 +1,34 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We are trying to measure the effect of changing "{{ variable_name }}" on the following variable: "{{ descendant_outcomes }}".
+We have decided to induce variation on "{{ variable_name }}" by endowing the "{{ varied_agent }}" with this attribute: {{varied_attribute}}.
+We are then going to rerun the simulation {{variation_number}} times, each time with a different value for this attribute: {{varied_attribute}}.
+We are trying to decide which values to use for inducing variation in the attribute, we have tentatively chosen these: {{varied_attribute}}:{{attribute_values}}.
+However, we also have other variables that we are inducing variation at the same time to run multiple experiments at once.
+We are inducing variation in these other variables: {{other_variables}}.
+And we are inducing variation in these variables through these attributes, values, and agents respectively for each other variables: {{other_variable_info}}
+We want to make sure that these controlled values overlap appropriately in order to determine the effects of the variables on the outcomes in the experiment.
+For example, if the scenario is "two people bargaining over a mug", the outcome is "whether a deal happens", and there are two causes that we are inducing variation on:
+The seller's value of the mug, which we operationalize as the attribute "your value for the mug in dollars" 
+and the buyer's budget for the mug which we operationalize as "your budget" to the buyer, then we want our values for the value and the budget to be in a similar range.
+We wouldn't want the seller's values to be varied over [$50, $100, $200, $300, $400] and the buyer's budget to be varied over [$5, $10, $15, $20, $25],
+because then the seller's value for the mug will always be higher than the buyer's budget,
+there will probably never be a deal and it will appear as though these variables don't matter even though they probably do matter.
+A better combination of values to test would be to make sure the seller values the mug varied over [$5, $10, $15, $20, $25] - similarly to the buyer.
+Another example is if the scenario is "an auction with 2 bidders for a piece of art" and the outcome is "the final price of the auction".
+If the two causal variables are "bidder 1's value for the art" and "bidder 2's value for the piece of art",
+then we want to make sure that these are in a similar range for their variations.
+Otherwise, we might get a false negative when measuring the causal effect of the causes on the final price of the deal.
+Please check and decide whether the values {{attribute_values}} are aligned for {{varied_attribute}} with the values for the other variables: "{{other_variables}}" as described above. 
+It's important to note that there should be at least 7 values.
+If they are appropriately aligned and less than 7 of them, add a few to make at least 7 values.
+If they are not aligned, please select new or expanded values (at least 7).
+If they are appropriately aligned and there are at least 7, reprint them.
+Here is an example JSON that's in the correct format with double quotes:
+{{ '{' }}
+"attribute_values": [list of new/expanded values or copy previous list if it's good],
+"explanation": "short explanation for changing the values or keeping them the same{{ '}' }}

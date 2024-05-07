@@ -1,0 +1,23 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are trying to measure the effect of changing these exogenous variables: {{ exogenous_variables }}, on this outcome variable: {{ relevant_outcome }}.
+Part of the simulation is generating the minimum amount of necessary background information to tell the agents so that they can participate in the scenario and we can measure the effect of the variables on the outcome.
+We have determinted that the goal of the {{ agent }} is: {{ goal }}.
+The {{ agent }} faces this constraint: {{ constraint }}.
+We have already endowed the {{ agent }} with the following attributes in order to experiment with the exogenous variables: {{ varied_attributes }}.
+We will give them values for those attributes once we generate the {{ agent }} .
+What additional information do we need to give the {{ agent }} that they can participate in the scenario and we can measure the effect of the variables on the outcome.
+The agent already knows the following information:
+1. The scenario description, their own position in the scenario, and that the scenario is occuring.
+2. Their own goal and their own constraint.
+3. The agent is aware of the presents and the roles of the other aagents.
+4. The attributes we have endowed them with already in order to experiment with the exogenous variables.
+The following 3 types of information are not valid as responses:
+1. The goals, constraints and varied attributes of the other agents.
+2. The agents are just participants in the scenario, so they do not need to know anything about the variables, the variables operationalization, etc.
+3. Information should not be something they already know that has been listed above.
+In order to be included in the list of information, information must be absolutely essential.
+For example, if two people are bargaining over a mug, the only information they need is the value of the mug to themselves.
+Respond with a JSON in the following format:
+{{ '{' }}"information": ["piece of info 1", "piece of info 2", "piece of info 3"],
+"explanation of each piece of information": "description of the method"{{ '}' }}

@@ -1,0 +1,8 @@
+.env
+.DS_Store
+*.db
+*.csv
+*.json
+*.png
+*.pyc
+__pycache__

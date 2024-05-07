@@ -1,0 +1,32 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple experimental simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+What are the specific levels this variable can take on?
+We want to appropriately measure "{{ variable_name }}" them for data analysis.
+A few things to consider:
+1. If a variable is continuous, you should create {{ num_cont_lvls }} ordinal levels that are specified by numerical cutoffs in the continuous variables units that are appropriate for data analysis.
+For example, even though monetary values can be negative, they usually aren't less than 0 unless the value is a debt.
+If a variable is continuous and doesn't technically have a maximum (or minimum) value, then the levels should have an option that indicates "+" or "above (or "-" or "below" if appropriate).
+For a example, if the continuous variable was "the price of a mug", the levels should not be: ['0-20', '21-40', '41-60', '61-80', '81-100'], but could be ['0-20', '21-40', '41-60', '61-80', 'above 80'] or ['0-20', '21-40', '41-60', '61-80', '81+']
+You should be very careful to not make these levels too large in their jumps. 
+For example, if the variable is "the final price of a mug", the levels shouldn't be ['0-50', '50-100', '100-200', '200+'], because almost any reasonably priced mug will be in the bottom level.
+Instead, it makes sense to have the levels be ['0-5', '5-10', '10-20', '20+'] since most mugs are below $20.
+Other items will have different ranges, but we want to appropriately capture reasonable variability at each level.
+2. If a variable is a count, you should create {{ num_cont_lvls }} ordinal levels that are specified by numerical cutoffs in the count variables units that are appropriate for data analysis.
+If a variable is a count and doesn't technically have a maximum (or minimum) value, then the levels should have an option that indicates "+" or "above" (or "-" or "below" if appropriate).
+For a example, if the count variable was "number of people", the levels should not be: ['0-3', '4-7', '8-10', '11-14'], but could be ['0-3', '4-7', '8-10', 'above 10'] or ['0-3', '4-7', '8-10', '11+']
+3. If a variable is ordinal, you should specify all values it can take on unless the number of values is extremely high.
+For example, if the ordinal variable is a likert scale from 1-7, the output should be: ["1","2","3","4","5","6","7"].
+Another example, if the ordinal variable can be put in categories from "low" to "high', the output should have all possible values in the form of: ["low","medium","high"]
+4. If a variable is binary, you should specify both possible values it can take on - the smallest/worst being first and the bigger or better as second.
+5. If the levels are indicated by ranges of numbers, each level should always specify the range and not just state the upper or lower bound for each variable.
+For example, if the variable "fear level of the agent" is operationalized by being quantified on a scale from 1 (no fear) to 100 (extreme fear),
+the levels should not be ["1", "20", "40", "60", "80", "100"], but should be something like: ["1-20", "21-40", "41-60", "61-80", "81-100"]
+6. All levels for a given variable must be mutually exclusive.
+7. When listing the levels, if the variable is binary, count, continuous, or ordinal, you must always list them from smallest to largest.
+Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+{{ '{' }}"levels": "choice of levels as a list",
+"explanation": "short explanation for choice"{{ '}' }}

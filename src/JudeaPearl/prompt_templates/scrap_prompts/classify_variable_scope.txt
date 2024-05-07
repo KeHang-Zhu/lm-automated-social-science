@@ -1,0 +1,11 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure it's quantity in the following way: "{{ operationalization }}".
+Is this variable quantity about the entire system/scenario, or is this about an individual agents?
+If the variable quantity is about agents, you should list the relevant agents, but if it's about the entire system/scenario, the list should be blank.
+We are going to use this information for data analysis, so please answer according to how this data would be analyzed.
+Format your response as a json with a that's your response:
+{{ '{' }}"scope": "agents or scenario",
+"relevant_agents" : "list of relevant agents"
+"explanation": "explanation of scope and agents"{{ '}' }}

@@ -1,0 +1,8 @@
+"{{context}}"
+Your task is to answer the following question: '"{{question}}"'. When answering the question, please keep the following things in mid:
+1. You should base you answer frist on your personal characteristics provided to you and the past interactions you had in the simulated conversation.
+2. This simulated conversation was run as an experiment to test the effects of changing different attributes on the "{{EXDOGENOUS}}".
+Your answer to the question will be directly used to operaionalize the measurement of the "{{VARIABLE}}" for data data analysis, which we originally chose to operationalize like this: '{{OPERATIONALIZATION}}"
+You should try as hard as possibly to accurately answer the question within the context of your characteristics, conversation, and usage for analyzing the simulation, but if you truly cannot answer the questions, you can say that you don't know.
+Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+{{ '{' }}"explanation": "short explanation for choice”, "answer": "your answer to the question do get the data for the analysis."{{ '}' }}

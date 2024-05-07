@@ -1,0 +1,24 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+The agents need constraints in order to be rational.
+In order to be rational, what is the constraint for this human agent in the scenario: {{ agent }}?
+The agent should have only one constraint at most.
+We have already identified the goal for this agent: {{ goal }}.
+A few things to note about the constraints:
+1. Constraints should only be things that are absolutely necessary for rational behavior and should not be associated with preferences.
+For example, if the scenario is "negotiating to buy a car" and the agents are "a buyer" and "a seller",
+a constraint for the seller should not be "influenced by emotions", but should be "will not accept a price below seller's value".
+2. Constraints need to be about limiting the agent's decision-making and what they say, not about what the agent should do.
+3. Constraints cannot be about limiting the time of interactions between agents, but they can be about the number of interactions if that prevents irrational behavior.
+For example, a constraint should not be, "do not speak for more than 5 minutes", but could be "do not speak more than 3 times".
+4. Constraints cannot be about limiting or affecting interactions between agents because whether two agents interact is a decision that is made by us externally.
+All agents will be able to talk to all other agents and will talk to them in an externally determined fashion.
+5. Constraints need to be expressed as instructions to the agent in the second person as we tell these constraints directly to the agents.
+6. Constraints can only be limiting actions that are completely irrational like accepting a price below the seller's value, or breaking a law, or spending more than the agent's budget.
+7. Constraints should be about things that the agent can realistically control in the scenario given their role.
+8. Constraints should not be about accommodating other agents wants or needs. 
+Agents do not need to be polite, or respect other agent's budgets to be rational, and constraints can only be about limiting irrational behavior.
+9. If there is no obviously necessary constraint, then the constraint should be "you have no constraints".
+Format your response as a JSON in this form and make sure that all keys and items are in double quotes correctly and that there are no double quotes within any strings:
+{{ '{' }}"explanation": "short explanation of goals and constraints",
+"constraint": "agent constraints"{{ '}' }}

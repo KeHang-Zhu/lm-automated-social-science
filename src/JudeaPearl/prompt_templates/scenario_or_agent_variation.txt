@@ -1,0 +1,19 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We need to determine if the scope of the variable of interest is an individual agent or the scenario as a whole.
+That is, if we were to exogenously vary the values of "{{ variable_name }}", is this variation something that applies to the entire scenario each time or to a specifica agent?
+For example, if the scenario is "two people bargaining over a mug" and the variable is "the reservation price of the buyer", then this is an individual scope because changing this variable is only directly known to the buyer.
+However, if the scenario is "two people bargaining over a mug" and the variable is "the size of the room", then the scope is the scenario since the size of the room is evidence to both the buy and the seller always.
+If the scope is an individual agent, you should say that the scope is "individual" and also determine the name of the agent.
+If the scope is about a scenario, you should say that the scope is "scenario" and the agent can also just be called "scenario".
+The scope should never be about multiple agents, it's either about one agent, or about the scenario as a whole.
+Determine the scope of: "{{ variable_name }}".
+Respond with a JSON in the following format:
+{{ '{' }}"variable_scope": "choice of scenario or individual",
+"relevant_entity": "name of agent or the scenario",
+
+"explanation": "short explanation of choice"{{ '}' }}

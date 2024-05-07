@@ -1,0 +1,10 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are running this simulation on a computer, so we need to determine how the agents will interact.
+We have determined that the agents should speak in a predermined order repeatedly until the simulation finishes.
+Please list the agents in the order that that they should speak to make the simulation as realistic as possible.
+If it's not obvious what the order should or it doesn't matter what the order is, just pick according to your best judgment.
+Every agent must be included.
+Respond with a JSON in the following format:
+{{ '{' }}"order": ['order of agents as a list'],
+"explanation": "explanation for choice"{{ '}' }}

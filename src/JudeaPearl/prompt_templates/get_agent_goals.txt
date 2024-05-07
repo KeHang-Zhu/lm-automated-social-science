@@ -1,0 +1,13 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+The agents need to have both goals to interact reasonably.
+Each agent should only have one goal.
+A few things to note:
+1. In order to be rational, what are the appropriate goals for this human agent in the scenario: {{ agent }}?
+2. The goals need to be expressed as instructions to the agent in the second person as we tell these goals directly to the agents.
+3. Goals cannot be about trying to initiate or limit interactions between agents because whether two agents interact is a decision that is made externally.
+4. Goals must be about things that can be accomplished exclusively during the simulation.
+5. Goals must be under the control of the agent.
+Format your response as a JSON in this form and make sure that all keys and items are in double quotes correctly and that there are no double quotes within any string:
+{{ '{' }}"explanation": "short explanation of goal",
+"goal": agent goal{{ '}' }}

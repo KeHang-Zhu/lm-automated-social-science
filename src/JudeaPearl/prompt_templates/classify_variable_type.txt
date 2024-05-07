@@ -1,0 +1,16 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+Is the quantity most naturally a continuous variable, a binary variable, a count variable, or an ordinal variable?
+We are going to use this information for data analysis, so please answer according to how this data would be analyzed.
+A few things to remember in your response:
+1. If the variable is operationalized by a scale, then it is always ordinal.
+2. If the variable is a count of something like "the number of agents" or "number of statements", then it is count.
+3. If a variable is operationalized in categories that are increasing/decreasing like "low", "medium", "high", then it is ordinal.
+4. If a variable is represented by time, a numerical value, or currency, then it's continuous.
+5. If the variable can have only two possible values, then it's binary.
+6. You must select one and only one option from the list of types (continuous, binary, count, ordinal)
+Format your response as a json in this form and make sure that all keys and items are in double quotes correctly:
+{{ '{' }}"variable_type": "choice of continuous, binary, count, ordinal",
+"explanation": "short explanation of variable type choice"{{ '}' }}

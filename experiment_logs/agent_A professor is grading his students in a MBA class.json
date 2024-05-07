@@ -1,0 +1,1075 @@
+{
+    "exp_role": {
+        "professor": {
+            "your role is": "professor",
+            "your name": "professor thompson",
+            "your grading policy": "",
+            "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+            "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+        },
+        "student 1": {
+            "your role is": "student 1",
+            "your name": "alicia",
+            "professor's grading policy": "",
+            "your previous year's gpa": "",
+            "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+            "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+        },
+        "student 2": {
+            "your role is": "student 2",
+            "your name": "brendan",
+            "professor's grading policy": "",
+            "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+            "_constraint": "you must not engage in cheating or plagiarism in any form."
+        },
+        "student 3": {
+            "your role is": "student 3",
+            "your name": "candice",
+            "professor's grading policy": "",
+            "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+            "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+        },
+        "student 4": {
+            "your role is": "student 4",
+            "your name": "derek",
+            "professor's grading policy": "",
+            "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+            "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+        }
+    },
+    "variations": {
+        "professor's grading strictness": {
+            "professor": {
+                "your grading policy": [
+                    "very strict",
+                    "strict",
+                    "moderate",
+                    "lenient",
+                    "very lenient"
+                ]
+            },
+            "student 1": {
+                "professor's grading policy": [
+                    "very strict",
+                    "strict",
+                    "moderate",
+                    "lenient",
+                    "very lenient"
+                ]
+            },
+            "student 2": {
+                "professor's grading policy": [
+                    "very strict",
+                    "strict",
+                    "moderate",
+                    "lenient",
+                    "very lenient"
+                ]
+            },
+            "student 3": {
+                "professor's grading policy": [
+                    "very strict",
+                    "strict",
+                    "moderate",
+                    "lenient",
+                    "very lenient"
+                ]
+            },
+            "student 4": {
+                "professor's grading policy": [
+                    "very strict",
+                    "strict",
+                    "moderate",
+                    "lenient",
+                    "very lenient"
+                ]
+            }
+        },
+        "student 1's prior academic performance": {
+            "professor": {},
+            "student 1": {
+                "your previous year's gpa": [
+                    "0.4",
+                    "1.3",
+                    "2.2",
+                    "3.1",
+                    "3.8"
+                ]
+            },
+            "student 2": {},
+            "student 3": {},
+            "student 4": {}
+        }
+    },
+    "interaction_type": "center ordered",
+    "order_dict": {
+        "order": [
+            "student 1",
+            "student 2",
+            "student 3",
+            "student 4"
+        ],
+        "central agent": "professor"
+    },
+    "measurementsInfo": {
+        "final grade of the student": {
+            "professor": [
+                "what final grade did each student receive in the class? please use the categories of 'f', 'd', 'c', 'b', and 'a' to describe their performance."
+            ]
+        },
+        "professor's grading strictness": {},
+        "student 1's prior academic performance": {}
+    },
+    "combined_dicts": [
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very strict",
+                "your previous year's gpa": "0.4",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very strict",
+                "your previous year's gpa": "1.3",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very strict",
+                "your previous year's gpa": "2.2",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very strict",
+                "your previous year's gpa": "3.1",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very strict",
+                "your previous year's gpa": "3.8",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "strict",
+                "your previous year's gpa": "0.4",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "strict",
+                "your previous year's gpa": "1.3",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "strict",
+                "your previous year's gpa": "2.2",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "strict",
+                "your previous year's gpa": "3.1",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "strict",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "strict",
+                "your previous year's gpa": "3.8",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "strict",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "strict",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "strict",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "moderate",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "moderate",
+                "your previous year's gpa": "0.4",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "moderate",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "moderate",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "moderate",
+                "your previous year's gpa": "1.3",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "moderate",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "moderate",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "moderate",
+                "your previous year's gpa": "2.2",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "moderate",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "moderate",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "moderate",
+                "your previous year's gpa": "3.1",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "moderate",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "moderate",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "moderate",
+                "your previous year's gpa": "3.8",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "moderate",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "moderate",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "lenient",
+                "your previous year's gpa": "0.4",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "lenient",
+                "your previous year's gpa": "1.3",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "lenient",
+                "your previous year's gpa": "2.2",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "lenient",
+                "your previous year's gpa": "3.1",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "lenient",
+                "your previous year's gpa": "3.8",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very lenient",
+                "your previous year's gpa": "0.4",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very lenient",
+                "your previous year's gpa": "1.3",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very lenient",
+                "your previous year's gpa": "2.2",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very lenient",
+                "your previous year's gpa": "3.1",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        },
+        {
+            "professor": {
+                "your role is": "professor",
+                "your name": "professor thompson",
+                "your grading policy": "very lenient",
+                "_goal": "evaluate each student's work fairly and accurately, providing constructive feedback where necessary",
+                "_constraint": "you must not let personal bias or irrelevant factors influence your grading. your evaluations should be based solely on the quality of each student's work."
+            },
+            "student 1": {
+                "your role is": "student 1",
+                "your name": "alicia",
+                "professor's grading policy": "very lenient",
+                "your previous year's gpa": "3.8",
+                "_goal": "study diligently, understand the course material, and aim to get a high grade in the class.",
+                "_constraint": "you must not cheat or plagiarize in any form while completing your assignments and exams."
+            },
+            "student 2": {
+                "your role is": "student 2",
+                "your name": "brendan",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to achieve high grades by thoroughly understanding the course material, actively participating in class discussions, and completing all assignments and exams to the best of your ability.",
+                "_constraint": "you must not engage in cheating or plagiarism in any form."
+            },
+            "student 3": {
+                "your role is": "student 3",
+                "your name": "candice",
+                "professor's grading policy": "very lenient",
+                "_goal": "strive to understand the course material thoroughly, participate actively in class discussions, complete all assignments on time, and prepare well for exams to achieve a high grade.",
+                "_constraint": "you must not plagiarize work or cheat on exams, as these actions are against academic integrity rules and can result in severe penalties, including failure in the course."
+            },
+            "student 4": {
+                "your role is": "student 4",
+                "your name": "derek",
+                "professor's grading policy": "very lenient",
+                "_goal": "your goal is to strive for academic excellence. to achieve this, you need to understand the course material thoroughly, participate actively in class discussions, and submit all your assignments on time and of high quality.",
+                "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarizing work or cheating on exams."
+            }
+        }
+    ]
+}

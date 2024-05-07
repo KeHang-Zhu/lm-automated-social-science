@@ -1,0 +1,27 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}", 
+and if the variable is not continuous, these explicit possible outcome levels: "{{ levels }}".
+We will ask agents these: questions to measure the variable: "{{measurement_questions}}",
+and we will measure them using this method of aggregation: {{ measurement_aggregation }}.
+Finally, we have determined that this variable is latent, meaning that it cannot be directly observed and must be measured through an operationalization - as described above.
+Assuming that this variable is part of a Structural Causal Model, we must determine the observed measurement varaibles to perform factor analysis.
+Using the operationationization of the of the variable, what are the name (or names) of the variables we are using to operationalize {{ variable_name }}?
+A few things to consider:
+1, When naming the proxies, you should make sure to use names that are clearly obervable.
+For example, if the latent variable is "a person's initial mood", the observed proxy shouldn't just be a repitition of this.
+It should be something like "survey responses of person's mood" or "presence of a frown" depending on how the variable is operationalized.
+2. If a variable is operationalized by an agent answering a question/rating a value, the observed proxy should be "agent's rating of..." or "agents description of..." and then their answer, or something in that form.
+For example, if the variable is "prosecutor's assessment of the threat to public safety" and it's operationalized as: "an ordinal variable, categorized as 'low', 'medium', or 'high'",
+then the observed proxy should not be the "prosecutor's threat assessment", but should be someing the like "prosecutor's classification of the threat assessment".
+3. The number of observed proxies should be the same as the number of variables used in the operationalization.
+For example, if the variable is operationalized through a single question or rating or value, it probably only has one observed proxy.
+4. If the variable is operationalized looking at the transcript of the scenario and counting events, the observed proxy should just be the count of the even and doesn't need to include the transcript as a proxy becuase the transript is a given.
+Respond with a JSON in the following format:
+{{ '{' }}"observed_proxies": ["oberved proxy 1", "oberved proxy 2"],
+"explanation": "short explanation of choice"{{ '}' }}
+
+

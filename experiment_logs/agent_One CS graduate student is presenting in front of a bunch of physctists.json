@@ -1,0 +1,1200 @@
+{
+    "exp_role": {
+        "cs graduate student": {
+            "your role is": "cs graduate student",
+            "your name": "ethan",
+            "your level of advanced concepts knowledge": "",
+            "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+            "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+        },
+        "physicist 1": {
+            "your role is": "physicist 1",
+            "your name": "dr. newton",
+            "cs graduate student's level of advanced concepts knowledge": "",
+            "your level of computer science education": "",
+            "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+            "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+        },
+        "physicist 2": {
+            "your role is": "physicist 2",
+            "your name": "dr. einstein",
+            "cs graduate student's level of advanced concepts knowledge": "",
+            "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+            "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+        },
+        "physicist 3": {
+            "your role is": "physicist 3",
+            "your name": "dr. hawking",
+            "cs graduate student's level of advanced concepts knowledge": "",
+            "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+            "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+        }
+    },
+    "variations": {
+        "cs graduate student's knowledge on the topic": {
+            "cs graduate student": {
+                "your level of advanced concepts knowledge": [
+                    "basic understanding",
+                    "intermediate understanding",
+                    "advanced understanding",
+                    "expert understanding",
+                    "leading expert",
+                    "pioneer in the field",
+                    "world-renowned expert"
+                ]
+            },
+            "physicist 1": {
+                "cs graduate student's level of advanced concepts knowledge": [
+                    "basic understanding",
+                    "intermediate understanding",
+                    "advanced understanding",
+                    "expert understanding",
+                    "leading expert",
+                    "pioneer in the field",
+                    "world-renowned expert"
+                ]
+            },
+            "physicist 2": {
+                "cs graduate student's level of advanced concepts knowledge": [
+                    "basic understanding",
+                    "intermediate understanding",
+                    "advanced understanding",
+                    "expert understanding",
+                    "leading expert",
+                    "pioneer in the field",
+                    "world-renowned expert"
+                ]
+            },
+            "physicist 3": {
+                "cs graduate student's level of advanced concepts knowledge": [
+                    "basic understanding",
+                    "intermediate understanding",
+                    "advanced understanding",
+                    "expert understanding",
+                    "leading expert",
+                    "pioneer in the field",
+                    "world-renowned expert"
+                ]
+            }
+        },
+        "physicist 1's familiarity with computer science": {
+            "cs graduate student": {},
+            "physicist 1": {
+                "your level of computer science education": [
+                    "never studied computer science",
+                    "completed an introductory course or self-studied basic concepts",
+                    "completed multiple courses or significant self-study",
+                    "hold a minor or equivalent in computer science",
+                    "hold a major, graduate degree, or equivalent in computer science"
+                ]
+            },
+            "physicist 2": {},
+            "physicist 3": {}
+        }
+    },
+    "interaction_type": "center ordered",
+    "order_dict": {
+        "order": [
+            "physicist 1",
+            "physicist 2",
+            "physicist 3"
+        ],
+        "central agent": "cs graduate student"
+    },
+    "measurementsInfo": {
+        "the number of questions asked by physicists": {
+            "oracle": [
+                "can you please count the number of sentences that end with a question mark and are attributed to 'physicist 1', 'physicist 2', or 'physicist 3'?"
+            ]
+        },
+        "cs graduate student's knowledge on the topic": {},
+        "physicist 1's familiarity with computer science": {}
+    },
+    "combined_dicts": [
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "basic understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "basic understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "basic understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "basic understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "basic understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "basic understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "intermediate understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "advanced understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "expert understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "expert understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "expert understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "expert understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "expert understanding",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "expert understanding",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "leading expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "leading expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "leading expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "leading expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "leading expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "leading expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "pioneer in the field",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "your level of computer science education": "never studied computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "your level of computer science education": "completed an introductory course or self-studied basic concepts",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "your level of computer science education": "completed multiple courses or significant self-study",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "your level of computer science education": "hold a minor or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        },
+        {
+            "cs graduate student": {
+                "your role is": "cs graduate student",
+                "your name": "ethan",
+                "your level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "your goal is to present your research clearly and understandably, making sure to explain any technical jargon or concepts that might be unfamiliar to the physicists.",
+                "_constraint": "you must not use technical jargon or concepts without providing an explanation that the physicists can understand."
+            },
+            "physicist 1": {
+                "your role is": "physicist 1",
+                "your name": "dr. newton",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "your level of computer science education": "hold a major, graduate degree, or equivalent in computer science",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify your understanding, and engage in discussions to expand your knowledge on the topic.",
+                "_constraint": "you should not ask questions or engage in discussions that are not relevant to the topic of the cs graduate student's presentation."
+            },
+            "physicist 2": {
+                "your role is": "physicist 2",
+                "your name": "dr. einstein",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively, ask clarifying questions if needed, and try to understand how the presented material can be applied to your field of physics.",
+                "_constraint": "you should not make assumptions or conclusions about the presented material without proper understanding or without asking clarifying questions if needed."
+            },
+            "physicist 3": {
+                "your role is": "physicist 3",
+                "your name": "dr. hawking",
+                "cs graduate student's level of advanced concepts knowledge": "world-renowned expert",
+                "_goal": "listen attentively to the cs graduate student's presentation, ask relevant questions to clarify any complex points, and evaluate how the information could be applied in your field of physics.",
+                "_constraint": "you should not ask questions or make comments that are irrelevant to the topic of the presentation or your field of physics."
+            }
+        }
+    ]
+}

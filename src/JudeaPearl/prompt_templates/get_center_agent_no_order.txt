@@ -1,0 +1,8 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are running this simulation on a computer, so we need to determine how the agents will interact.
+e have determined that there is one central agent and then all other agents. The center agent speaks every other time with a random non-central agent.
+Please select which agent should be the central agent.
+Respond with a JSON in the following format:
+{{ '{' }}"central agent": choice which agent is central,
+"explanation": "explanation for choice"{{ '}' }}

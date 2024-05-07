@@ -1,0 +1,17 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}", 
+and if the variable is not continuous, these explicit possible outcome levels: "{{ levels }}".
+We need to determine if the variable of interest is latent or observed.
+Observed variables are those that can be directly measured, recorded, or observed. 
+For example, height, weight, age, or a score on a test are observed variables because you can directly measure these quantities.
+Latent variables are those that cannot be directly observed or measured.
+They are often constructs or concepts, like intelligence, depression, or satisfaction. 
+These variables are usually measured indirectly, through a series of observed variables that are thought to 'tap into' the latent construct.
+Is "{{ variable_name }}" latent or observed?
+Respond with a JSON in the following format:
+{{ '{' }}"latent_or_observed": "choice of latent or observed",
+"explanation": "short explanation of choice"{{ '}' }}

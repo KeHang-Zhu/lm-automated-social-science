@@ -1,0 +1,320 @@
+{
+    "scm": "{\"class\": \"StructuralCausalModelBuilder\", \"args\": {\"template_dir\": \"/Users/wonderland/Desktop/2023Fall/robot_scientist/src/../src/JudeaPearl/prompt_templates\", \"scenario_description\": \"A business professor is grading two student in a MBA class\", \"agents_in_scenario\": [\"business professor\", \"mba student 1\", \"mba student 2\"], \"variables\": [\"final grade of student 1\", \"mba student 1's prior academic performance\"], \"edge_dict\": {\"mba student 1's prior academic performance\": {\"__set__\": [\"final grade of student 1\"]}}, \"variable_dict\": {\"final grade of student 1\": {\"class\": \"EndogenousVariable\", \"args\": {\"template_dir\": \"/Users/wonderland/Desktop/2023Fall/robot_scientist/src/../src/JudeaPearl/prompt_templates\", \"name\": \"final grade of student 1\", \"scenario_description\": \"A business professor is grading two student in a MBA class\", \"agents_in_scenario\": [\"business professor\", \"mba student 1\", \"mba student 2\"], \"operationalization_dict\": {\"operationalization\": \"the final grade of student 1 is an ordinal variable that is categorized as 'fail', 'pass', 'credit', 'distinction', 'high distinction'.\", \"method_to_obtain_quantity\": \"the grade will be obtained by asking the business professor agent at the end of the scenario, 'what is the final grade of mba student 1?' the response should fall into one of the predefined categories.\"}, \"variable_type\": \"ordinal\", \"units\": \"level of academic achievement\", \"levels\": [\"fail\", \"pass\", \"credit\", \"distinction\", \"high distinction\"], \"agent_measure_question_dict\": {\"business professor\": [\"what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.\"]}, \"measurement_aggregation\": \"no aggregation is necessary as there is only one question asked to a single agent.\", \"descendant_outcomes\": [], \"possible_covariates\": [], \"explanations_dict\": {\"operationalization_dict\": \"the final grade of student 1 is operationalized as the grade given by the business professor at the end of the scenario. this grade is assumed to be based on the professor's assessment of the student's performance in the mba class. the grade will be quantified as an ordinal variable with categories 'fail', 'pass', 'credit', 'distinction', 'high distinction'.\", \"variable_type\": \"the variable 'final grade of student 1' is operationalized by a scale with categories ('fail', 'pass', 'credit', 'distinction', 'high distinction') that are increasing in order, thus making it an ordinal variable.\", \"units\": \"the final grade of student 1 is an ordinal variable that is categorized as 'fail', 'pass', 'credit', 'distinction', 'high distinction', which represent different levels of academic achievement.\", \"levels\": \"these levels are directly derived from the operationalization of the variable 'final grade of student 1'. they represent the possible grades that the student can receive, ordered from the lowest to the highest level of academic achievement.\", \"measurement_questions\": \"the business professor is the most appropriate agent to ask this question as they are the one who assigns the final grade. the question is clear and straightforward, asking for the final grade of mba student 1. since the grading system is ordinal, the professor's response will fall into one of the predefined categories ('fail', 'pass', 'credit', 'distinction', 'high distinction'). therefore, no aggregation is necessary.\"}, \"causes\": [\"mba student 1's prior academic performance\"], \"LLM\": {\"class\": \"LanguageModel\", \"args\": {\"model\": \"gpt-4\", \"family\": \"openai\", \"temperature\": 0.4, \"max_tokens\": null, \"system_prompt\": \"You are a social scientist who loves research and coming up with ideas.\", \"family_model_mapping\": {\"openai\": {\"text-davinci-003\": \"call_openai_api\", \"gpt-3.5-turbo\": \"call_openai_api_35\", \"gpt-4\": \"call_openai_api_35\"}, \"replicate\": {\"llama70b-v2-chat\": \"call_llama70b_v2\", \"llama13b-v2-chat\": \"call_llama13b_v2\"}}}}}}, \"mba student 1's prior academic performance\": {\"class\": \"ExogenousVariable\", \"args\": {\"template_dir\": \"/Users/wonderland/Desktop/2023Fall/robot_scientist/src/../src/JudeaPearl/prompt_templates\", \"name\": \"mba student 1's prior academic performance\", \"scenario_description\": \"A business professor is grading two student in a MBA class\", \"agents_in_scenario\": [\"business professor\", \"mba student 1\", \"mba student 2\"], \"operationalization_dict\": {\"operationalization\": \"the student's prior academic performance is quantified as their gpa from their previous degree. this is a continuous variable that ranges from 0 to 4 (or 5, depending on the scale used by the institution). the gpa is calculated by assigning each grade a numerical value (e.g., a=4, b=3, c=2, d=1, f=0), multiplying this value by the number of credit hours for the course, summing these values for all courses, and then dividing by the total number of credit hours.\", \"method_to_vary\": \"to vary 'mba student 1's prior academic performance', we can assign different gpa values within the possible range. for example, we can use a low value (e.g., 2.0), a medium value (e.g., 3.0), and a high value (e.g., 4.0). these values should be randomly assigned to different instances of 'mba student 1' in the simulation.\"}, \"variable_type\": \"continuous\", \"units\": \"gpa scale\", \"levels\": [\"0-1\", \"1.01-2\", \"2.01-3\", \"3.01-4\", \"4.01-5\"], \"agent_measure_question_dict\": {}, \"measurement_aggregation\": [], \"descendant_outcomes\": [\"final grade of student 1\"], \"possible_covariates\": [], \"explanations_dict\": {\"operationalization_dict\": \"the operationalization of 'mba student 1's prior academic performance' will be based on the student's grade point average (gpa) from their previous degree. this is a continuous variable that can range from 0 to 4 (or 5, depending on the scale used by the institution). the gpa is a widely recognized measure of academic performance and can be easily obtained from the student's academic transcript.\", \"variable_type\": \"the variable 'mba student 1's prior academic performance' is operationalized as the student's gpa from their previous degree, which is a numerical value that can take on any value within a certain range (0 to 4 or 5). therefore, it is a continuous variable.\", \"units\": \"the variable is measured on a scale from 0 to 4 or 5, depending on the institution, which is commonly referred to as the gpa scale. this scale is used to quantify academic performance.\", \"levels\": \"these levels are chosen to appropriately capture the variability in the gpa of 'mba student 1'. the gpa scale used by most institutions ranges from 0 to 4 or 5. therefore, dividing this range into five equal intervals provides a reasonable measure of variability. a student with a gpa in the range of '0-1' would be considered as having poor academic performance, '1.01-2' as below average, '2.01-3' as average, '3.01-4' as above average, and '4.01-5' as excellent. this allows for a detailed analysis of 'mba student 1's prior academic performance.\", \"scenario_or_agent_var\": \"the variable 'mba student 1's prior academic performance' pertains specifically to the individual agent 'mba student 1'. it does not apply to the entire scenario or to other agents within the scenario. therefore, the scope is individual.\", \"attribute_variation\": \"the attribute 'your previous degree gpa' corresponds to the variable 'mba student 1's prior academic performance', which is continuous. this attribute is given to 'mba student 1' to induce variation. the values chosen for this attribute are within the range of possible gpa scores and are spread out to represent different levels of academic performance. these values are continuous and correspond to the variable type. the attribute is clear and understandable to the agent without additional context.\", \"public_or_private_var\": \"the prior academic performance (gpa) of a student is typically considered confidential information and is not disclosed to other students. therefore, in this scenario, the mba student 1's gpa should be known only to the student and the professor, making it a private attribute.\"}, \"scenario_or_agent_var\": {\"variable_scope\": \"individual\", \"relevant_entity\": \"mba student 1\"}, \"attribute_variation\": {\"attribute_name\": \"your previous degree gpa\", \"attribute_values\": [\"0.5\", \"1.5\", \"2.5\", \"3.5\", \"4.5\"], \"varied_agent\": \"mba student 1\"}, \"public_or_private_var\": {\"choice\": \"private\", \"public_name\": \"private\", \"public_values\": []}, \"causes\": [], \"variation_mapping\": {}, \"LLM\": {\"class\": \"LanguageModel\", \"args\": {\"model\": \"gpt-4\", \"family\": \"openai\", \"temperature\": 0.4, \"max_tokens\": null, \"system_prompt\": \"You are a social scientist who loves research and coming up with ideas.\", \"family_model_mapping\": {\"openai\": {\"text-davinci-003\": \"call_openai_api\", \"gpt-3.5-turbo\": \"call_openai_api_35\", \"gpt-4\": \"call_openai_api_35\"}, \"replicate\": {\"llama70b-v2-chat\": \"call_llama70b_v2\", \"llama13b-v2-chat\": \"call_llama13b_v2\"}}}}}}}, \"LLM\": {\"class\": \"LanguageModel\", \"args\": {\"model\": \"gpt-4\", \"family\": \"openai\", \"temperature\": 0.4, \"max_tokens\": null, \"system_prompt\": \"You are a social scientist who loves research and coming up with ideas.\", \"family_model_mapping\": {\"openai\": {\"text-davinci-003\": \"call_openai_api\", \"gpt-3.5-turbo\": \"call_openai_api_35\", \"gpt-4\": \"call_openai_api_35\"}, \"replicate\": {\"llama70b-v2-chat\": \"call_llama70b_v2\", \"llama13b-v2-chat\": \"call_llama13b_v2\"}}}}}}",
+    "data": {
+        "0": {
+            "agents": {
+                "business professor": {
+                    "your role is": "business professor",
+                    "your name": "professor smith",
+                    "_goal": "your goal is to assess the knowledge and skills of 'mba student 1' and 'mba student 2' accurately and impartially, providing them with constructive feedback to help them improve.",
+                    "_constraint": "you must not let personal feelings or biases influence your grading and feedback for the students."
+                },
+                "mba student 1": {
+                    "your role is": "mba student 1",
+                    "your name": "john doe",
+                    "your previous degree gpa": "0.5",
+                    "_goal": "strive to understand the course material deeply and apply it effectively in your assignments and exams to achieve a high grade.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating on exams."
+                },
+                "mba student 2": {
+                    "your role is": "mba student 2",
+                    "your name": "jane doe",
+                    "_goal": "strive to understand and apply the course material effectively in your assignments and exams to achieve high grades.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating."
+                }
+            },
+            "interaction": [
+                {
+                    "professor smith": "Good afternoon, John and Jane. I've finished grading your recent assignments. I'd like to discuss your performance and areas where you can improve. Shall we begin?"
+                },
+                {
+                    "john doe": "Good afternoon, Professor Smith. I appreciate your feedback. Yes, let's begin."
+                },
+                {
+                    "professor smith": "Alright, let's start with you, John. Overall, your work was well-researched and your arguments were compelling. However, you need to work on your presentation skills. Your points were sometimes lost due to lack of clarity and structure. Jane, your analytical skills are impressive and your presentation was clear. However, your research lacked depth in certain areas. Both of you could benefit from peer reviewing each other's work. This can help you spot areas of improvement that you may have overlooked."
+                },
+                {
+                    "jane doe": "Thank you for the feedback, Professor Smith. I will definitely focus more on my research moving forward. As for the peer review suggestion, I think it's a great idea. John, would you be open to this?"
+                },
+                {
+                    "professor smith": "I'm glad to hear you're both receptive to the feedback. John, what are your thoughts on the peer review suggestion? Also, consider attending a workshop or seeking resources to improve your presentation skills. Remember, the goal is to continually learn and improve."
+                },
+                {
+                    "john doe": "Thank you, Professor Smith. I agree that my presentation skills need improvement. I'll seek resources and possibly attend a workshop to enhance them. Jane, I'm open to the idea of peer reviewing. I believe it will be beneficial for both of us."
+                },
+                {
+                    "professor smith": "That's great to hear, John. Remember, clear and effective communication is as important as the content itself. Jane, I recommend you delve deeper into your research topics, perhaps by exploring more diverse sources or seeking expert opinions. Both of you should also consider joining study groups or forums to broaden your perspectives. Keep up the good work and continue striving for improvement."
+                },
+                {
+                    "jane doe": "Thank you for the advice, Professor Smith. I will certainly delve deeper into my research and consider joining study groups. I believe these steps will help me improve."
+                },
+                {
+                    "professor smith": "I'm pleased to see your commitment to improvement. Remember, the journey of learning is continuous and it's important to keep refining your skills. I'm available if you need any guidance or resources. Keep up the good work, John and Jane."
+                }
+            ],
+            "survey": {
+                "final grade of student 1": {
+                    "business professor": {
+                        "what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.": "{\"explanation\": \"The final grade of MBA student 1, John Doe, is not explicitly mentioned in the conversation. However, based on the feedback provided by Professor Smith, it can be inferred that John has performed well in terms of research and argumentation but needs to improve his presentation skills. This suggests that he has not failed but also has not achieved a high distinction. Therefore, considering the feedback and the absence of any explicit mention of failure or high achievement, a reasonable assumption for his final grade could be 'pass' or 'credit'.\", \"answer\": \"pass\"}"
+                    }
+                }
+            }
+        },
+        "1": {
+            "agents": {
+                "business professor": {
+                    "your role is": "business professor",
+                    "your name": "professor smith",
+                    "_goal": "your goal is to assess the knowledge and skills of 'mba student 1' and 'mba student 2' accurately and impartially, providing them with constructive feedback to help them improve.",
+                    "_constraint": "you must not let personal feelings or biases influence your grading and feedback for the students."
+                },
+                "mba student 1": {
+                    "your role is": "mba student 1",
+                    "your name": "john doe",
+                    "your previous degree gpa": "1.5",
+                    "_goal": "strive to understand the course material deeply and apply it effectively in your assignments and exams to achieve a high grade.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating on exams."
+                },
+                "mba student 2": {
+                    "your role is": "mba student 2",
+                    "your name": "jane doe",
+                    "_goal": "strive to understand and apply the course material effectively in your assignments and exams to achieve high grades.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating."
+                }
+            },
+            "interaction": [
+                {
+                    "professor smith": "Good afternoon, John and Jane. I've finished grading your recent assignments and I'd like to discuss your performance. Both of you have shown a good understanding of the course material, but there are areas where you can improve. Let's start with you, John."
+                },
+                {
+                    "john doe": "Good afternoon, Professor Smith. I appreciate your feedback and I'm eager to understand where I can improve. Could you please elaborate on the areas that need more attention?"
+                },
+                {
+                    "professor smith": "Sure, John. In your case, while your understanding of the theoretical concepts is commendable, you need to focus more on their practical application. Try to incorporate more real-world examples in your assignments. This will not only demonstrate your understanding but also your ability to apply these concepts in a business context."
+                },
+                {
+                    "jane doe": "Good afternoon, Professor Smith. I'm glad to hear that I have a good understanding of the course material. Could you please provide specific areas where I need to improve? I'm committed to applying the course material effectively in my assignments and exams."
+                },
+                {
+                    "professor smith": "Of course, Jane. Similar to John, your theoretical understanding is solid. However, you could improve in your critical analysis. When discussing case studies, try to delve deeper into the implications and potential strategies, rather than just describing the situation. This will show your ability to think strategically and apply the concepts learned in class."
+                },
+                {
+                    "john doe": "Thank you for the feedback, Professor Smith. I will certainly work on incorporating more real-world examples into my assignments to better demonstrate my understanding and application of the theoretical concepts. I also plan to study more case studies to improve my practical application skills."
+                },
+                {
+                    "professor smith": "That sounds like a good plan, John. Remember, the goal is not just to understand the theory but to be able to apply it in real-world scenarios. Jane, do you have a plan to improve your critical analysis skills?"
+                },
+                {
+                    "jane doe": "Yes, Professor Smith. I plan to spend more time analyzing case studies in depth, focusing on the implications and potential strategies. I will also seek feedback on my analysis to ensure I'm thinking strategically. I believe this will help me improve my critical analysis skills."
+                },
+                {
+                    "professor smith": "That's a great approach, Jane. Remember, constructive feedback is a crucial part of learning. Both of you are on the right track. Keep up the good work and don't hesitate to ask for help if you need it."
+                }
+            ],
+            "survey": {
+                "final grade of student 1": {
+                    "business professor": {
+                        "what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.": "{\"explanation\": \"The final grade of MBA student 1, John Doe, is not explicitly mentioned in the conversation. However, Professor Smith commends John's understanding of theoretical concepts but suggests he needs to improve on applying these concepts practically. This indicates that John is performing satisfactorily but has room for improvement.\", \"answer\": \"pass\"}"
+                    }
+                }
+            }
+        },
+        "2": {
+            "agents": {
+                "business professor": {
+                    "your role is": "business professor",
+                    "your name": "professor smith",
+                    "_goal": "your goal is to assess the knowledge and skills of 'mba student 1' and 'mba student 2' accurately and impartially, providing them with constructive feedback to help them improve.",
+                    "_constraint": "you must not let personal feelings or biases influence your grading and feedback for the students."
+                },
+                "mba student 1": {
+                    "your role is": "mba student 1",
+                    "your name": "john doe",
+                    "your previous degree gpa": "2.5",
+                    "_goal": "strive to understand the course material deeply and apply it effectively in your assignments and exams to achieve a high grade.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating on exams."
+                },
+                "mba student 2": {
+                    "your role is": "mba student 2",
+                    "your name": "jane doe",
+                    "_goal": "strive to understand and apply the course material effectively in your assignments and exams to achieve high grades.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating."
+                }
+            },
+            "interaction": [
+                {
+                    "professor smith": "Good morning John and Jane. I have finished grading your recent assignments. I would like to discuss your performance and areas where you can improve. Shall we begin?"
+                },
+                {
+                    "john doe": "Good morning Professor Smith. Yes, I'm eager to learn about my performance and how I can improve. Please proceed."
+                },
+                {
+                    "professor smith": "Alright, John. Your understanding of the subject matter is clear, but your analysis could be more in-depth. I suggest you delve deeper into the case studies. Jane, your work is well-researched, but your presentation skills need improvement. Practice more on your delivery for a more impactful presentation."
+                },
+                {
+                    "jane doe": "Good morning Professor Smith. Thank you for your feedback. I will certainly work on my presentation skills. Could you please suggest any specific areas in my delivery that need improvement?"
+                },
+                {
+                    "professor smith": "Certainly, Jane. You tend to speak quite fast, which can make it difficult for your audience to follow your presentation. Also, work on your body language to appear more confident. Try to maintain eye contact and use hand gestures to emphasize your points."
+                },
+                {
+                    "john doe": "Thank you for the feedback, Professor Smith. I will definitely put more effort into analyzing the case studies in depth. Could you please suggest any specific methods or resources that could help me improve in this area?"
+                },
+                {
+                    "professor smith": "Of course, John. I recommend using the SWOT and PESTLE analysis methods for a comprehensive understanding of the case studies. Also, reading research papers and articles related to the subject matter can provide you with different perspectives. Make sure to critically evaluate all the information you gather."
+                },
+                {
+                    "jane doe": "Thank you, Professor Smith. I appreciate your advice. I will slow down my speech and work on my body language during presentations. I'll also practice maintaining eye contact and using hand gestures for emphasis."
+                },
+                {
+                    "professor smith": "You're welcome, Jane and John. I'm glad to see your willingness to improve. Remember, the goal is to learn and grow, not just to get good grades. Keep practicing and don't hesitate to ask for help if needed. I'm here to support you."
+                }
+            ],
+            "survey": {
+                "final grade of student 1": {
+                    "business professor": {
+                        "what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.": "{\"explanation\": \"The final grade of MBA student 1, John Doe, cannot be determined based on the conversation. The professor provided feedback on areas of improvement but did not mention a specific grade.\", \"answer\": \"I don't know.\"}"
+                    }
+                }
+            }
+        },
+        "3": {
+            "agents": {
+                "business professor": {
+                    "your role is": "business professor",
+                    "your name": "professor smith",
+                    "_goal": "your goal is to assess the knowledge and skills of 'mba student 1' and 'mba student 2' accurately and impartially, providing them with constructive feedback to help them improve.",
+                    "_constraint": "you must not let personal feelings or biases influence your grading and feedback for the students."
+                },
+                "mba student 1": {
+                    "your role is": "mba student 1",
+                    "your name": "john doe",
+                    "your previous degree gpa": "3.5",
+                    "_goal": "strive to understand the course material deeply and apply it effectively in your assignments and exams to achieve a high grade.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating on exams."
+                },
+                "mba student 2": {
+                    "your role is": "mba student 2",
+                    "your name": "jane doe",
+                    "_goal": "strive to understand and apply the course material effectively in your assignments and exams to achieve high grades.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating."
+                }
+            },
+            "interaction": [
+                {
+                    "professor smith": "Good morning John and Jane. I have finished grading your recent assignments. I'd like to discuss your performance and provide some feedback. Would that be alright with both of you?"
+                },
+                {
+                    "john doe": "Good morning Professor Smith. I appreciate your feedback, it's always helpful for my learning process. Please go ahead."
+                },
+                {
+                    "professor smith": "Great, thank you for your openness, John. Jane, do you also feel comfortable proceeding with the feedback?"
+                },
+                {
+                    "jane doe": "Good morning Professor Smith. Yes, I am comfortable with receiving feedback. It will certainly help me understand and apply the course material more effectively. Please proceed."
+                },
+                {
+                    "professor smith": "Thank you both for your receptiveness. Let's start with you, John. Your understanding of the course material is evident in your assignment. However, there's room for improvement in your analytical skills. Try to delve deeper into the case studies. And Jane, your analytical skills are commendable, but you need to work on your presentation skills to effectively communicate your ideas."
+                },
+                {
+                    "john doe": "Thank you for the feedback, Professor Smith. I will definitely work on improving my analytical skills and delve deeper into the case studies. Could you please provide some specific examples or strategies that might help me improve?"
+                },
+                {
+                    "professor smith": "Of course, John. A good strategy would be to use the SWOT analysis more effectively. Try to identify the strengths, weaknesses, opportunities, and threats in each case study. This will help you understand the situation better and make informed decisions. Also, try to question the assumptions and think about alternative outcomes. This will enhance your analytical skills."
+                },
+                {
+                    "jane doe": "Thank you for the feedback, Professor Smith. I understand the importance of effective communication. Could you please suggest some ways to improve my presentation skills?"
+                },
+                {
+                    "professor smith": "Certainly, Jane. One way to improve your presentation skills is to structure your thoughts clearly. Start with a brief introduction, followed by the main points, and conclude with a summary. Also, using visual aids such as graphs and charts can help in better understanding of your analysis. Practice is key, so rehearse your presentations to gain confidence and fluency."
+                },
+                {
+                    "john doe": "Thank you, Professor Smith. I will make sure to use SWOT analysis more effectively and question the assumptions in the case studies. I believe this will indeed enhance my analytical skills. I appreciate your guidance."
+                },
+                {
+                    "professor smith": "You're welcome, John. And Jane, remember that effective communication also involves listening and responding to feedback, so don't hesitate to ask for clarifications during your presentations. It's all part of the learning process. Keep up the good work, both of you."
+                }
+            ],
+            "survey": {
+                "final grade of student 1": {
+                    "business professor": {
+                        "what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.": "{\"explanation\": \"The final grade of MBA student 1, John Doe, cannot be determined based on the conversation. The professor provided feedback on areas of improvement but did not mention a specific grade.\", \"answer\": \"I don't know.\"}"
+                    }
+                }
+            }
+        },
+        "4": {
+            "agents": {
+                "business professor": {
+                    "your role is": "business professor",
+                    "your name": "professor smith",
+                    "_goal": "your goal is to assess the knowledge and skills of 'mba student 1' and 'mba student 2' accurately and impartially, providing them with constructive feedback to help them improve.",
+                    "_constraint": "you must not let personal feelings or biases influence your grading and feedback for the students."
+                },
+                "mba student 1": {
+                    "your role is": "mba student 1",
+                    "your name": "john doe",
+                    "your previous degree gpa": "4.5",
+                    "_goal": "strive to understand the course material deeply and apply it effectively in your assignments and exams to achieve a high grade.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating on exams."
+                },
+                "mba student 2": {
+                    "your role is": "mba student 2",
+                    "your name": "jane doe",
+                    "_goal": "strive to understand and apply the course material effectively in your assignments and exams to achieve high grades.",
+                    "_constraint": "you must not engage in any form of academic dishonesty, such as plagiarism or cheating."
+                }
+            },
+            "interaction": [
+                {
+                    "professor smith": "Good morning John and Jane. I've finished grading your recent assignments and I'd like to provide some feedback. Let's start with you, John. Your understanding of the subject matter is clear, but you could work on the presentation of your ideas. Jane, your analytical skills are impressive, but there's room for improvement in your time management. Remember, both of you, these are areas to work on and not criticisms. Keep up the good work."
+                },
+                {
+                    "john doe": "Thank you for your feedback, Professor Smith. I will definitely work on improving the presentation of my ideas. Could you provide some specific examples or tips on how I can do this effectively?"
+                },
+                {
+                    "professor smith": "Sure, John. One way to improve your presentation is to structure your ideas clearly. Start with an introduction, then present your main points, and conclude with a summary. Also, use visuals like graphs and charts where appropriate. They can help to convey complex information more effectively."
+                },
+                {
+                    "jane doe": "Thank you, Professor Smith, for your feedback. I understand the importance of time management. Could you please suggest some strategies that might help me improve in this area?"
+                },
+                {
+                    "professor smith": "Of course, Jane. One effective strategy is to prioritize your tasks based on their importance and deadlines. Use tools like calendars, planners, or apps to keep track of your tasks and deadlines. Also, try to eliminate distractions when you're working, and take regular short breaks to maintain your productivity. Remember, it's about working smarter, not harder."
+                },
+                {
+                    "john doe": "I appreciate your advice, Professor Smith. I will incorporate a clear structure and visuals in my future assignments to present my ideas more effectively. I believe this will not only enhance my understanding of the subject matter but also help me to communicate my ideas more clearly."
+                },
+                {
+                    "professor smith": "That's the spirit, John. Remember, effective communication is key in the business world. Jane, do you have any other questions or concerns about improving your time management skills?"
+                },
+                {
+                    "jane doe": "No, Professor Smith, I think your advice on prioritizing tasks and eliminating distractions will be very helpful. I will also explore some time management tools and techniques. I believe these strategies will help me manage my time more effectively. Thank you for your guidance."
+                }
+            ],
+            "survey": {
+                "final grade of student 1": {
+                    "business professor": {
+                        "what is the final grade of mba student 1? please respond with 'fail', 'pass', 'credit', 'distinction', or 'high distinction'.": "{\"explanation\": \"The final grade of MBA student 1, John Doe, cannot be determined based on the information provided in the conversation. The professor provided feedback on areas of improvement but did not mention a specific grade.\", \"answer\": \"I don't know.\"}"
+                    }
+                }
+            }
+        }
+    },
+    "attribute_value_mapping": {
+        "0": {
+            "mba student 1's prior academic performance": "0.5"
+        },
+        "1": {
+            "mba student 1's prior academic performance": "1.5"
+        },
+        "2": {
+            "mba student 1's prior academic performance": "2.5"
+        },
+        "3": {
+            "mba student 1's prior academic performance": "3.5"
+        },
+        "4": {
+            "mba student 1's prior academic performance": "4.5"
+        }
+    }
+}

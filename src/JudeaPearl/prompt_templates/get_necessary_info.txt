@@ -1,0 +1,49 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario multiple times with these human agents: "{{ relevant_agents }}" interacting with each other.
+Explicitly, we are interested in how the following causes: "{{ causes }}" affect these outcomes variables: {{outcomes}}.
+In each round of the simulation, we are going to vary one value of one of the causes to perform a perfectly randomized experiment to determine the causal effects of the varied cause on the outcomes.
+Here is a python dictionary the specifies the variation that we will induce in each of the causes: {{ varied_attribute_dict }}.
+The dictionary is structured such that each main key is the name of a cause, with values that are also dictionaries.
+In each of these subdictionaries is the attribute for a given agent that will be varied along a corresponding list of values.
+These varied values are the variations in the experiment and they are the most important pieces of information for each of the agents.
+However, the agents will need other information to realistically participat in the simulation.
+We need to generate the minimum amount of necessary background information to tell the agents so that they can participate in the scenario and we create the appropriate experiment to actually test the relationship between the causes and the outcomes.
+We will determine this for one agent at a time and are going to determine it for this agent right now {{ agent }}
+We have determined that the goal of the {{ agent }} is: {{ goal }}.
+The {{ agent }} faces this constraint: {{ constraint }}.
+What additional information do we need to give the {{ agent }} that they can participate in the scenario that is not provided in the goals, constraints, or attributes with their varied values?
+This information will only be provided to the agents once at the beginning of the simulation of the scenario.
+The following important points must be accounted for:
+1. The agent already knows the scenario description, their own position in the scenario, and that the scenario is occurring.
+2. The agent already knows their own goal and their own constraint.
+3. The agent is aware of the presence and the roles of the other agents, but not necessarily their goals, constraints and other attributes.
+4. The agent already knows the information for these attributes: {{varied_attributes}}, as indicated in the dictionary of varied attributes.
+The following types of information are not valid as responses:
+1. The goals and constraints of the other agents.
+2. The agents are just participants in the scenario, so they do not need to know anything about the variables, the variables operationalization, etc.
+3. Information should not be something they already know that has been listed above.
+4. No other agents nor information about agents is valid because this scenario cannot involve anyone else.
+5. Information should not be about who will speak next or who the agent will speak to next.
+This includes things like "moving from one interaction to the next". We will take care of agent communication separately.
+6. Information should not be about anything that will be established during the scenario.
+7. The information should not have anything to do with time - we will supply agents with all information about time separately.
+For example, if the scenario is "two people bargaining over a mug" and the agent is "the seller", then necessary information shouldn't be the buyer's initial offer because the buyer will make the initial offer during the simulation of the scenario.
+In order to be included in the list of information, information must be absolutely essential.
+For example, if the scenario is "a person getting therapy" and the agent is "the patient," then 'the importance of honesty and openness in therapy' is not absolutely necessary for the simulation.
+The agent can still realistically participate without knowing this piece of information. It's useful, but not necessary.
+Another example is if the scenario is "a family discussing a vacation destination" and the agent is "the mother," then she doesn't need to know 'the preferences of the other family members in terms of vacation spots' before the scenario starts even if it's useful.
+8. All pieces of information should be provided in the second person since they will be told directly to the agents.
+That is, just because something is important to know, doesn't mean it's necessary to know.
+For example, if two people are bargaining over a mug, the only information they need is the value of the mug to themselves.
+To put this in the second person, the piece of information could be "your value of the mug"
+Another example: if a person is interviewing for a job then the interviewer and interviewee should know what the job is (if they don't know already).
+To put this in the second person, the piece of information could be "the job you are interviewing for."
+9. All this pieces of information should only be the attributes, not the values of the attributes.
+Taking the previous example with the job interview, the piece of information should not be "the job you are interviewing for is a softare engineer", but should just be "the job you are interviewing for".
+We will provide the values for the pieces information after this - right now we only want the necessary info in the abstract to set up the simulation.
+Remember, this is only information that is provided to the agents once before the start of the scenario and is the bare minimum for them to participate in order to test how these causes "{{ causes }}" affect these outcomes variables: {{outcomes}}.
+Additionally, remember that the {{ agent }} will already have information about these attributes: {{ varied_attributes }}, including one of the values from the list of possible values in each simulation iteration.
+You must explain why each piece of information is essential to the simulation with respect to the variations for each simulation, otherwise the scenario could not work at all.
+Respond with a JSON in the following format:
+{{ '{' }}"explanation": "explanation of each piece of information",
+"information": ["piece of info 1", "piece of info 2", "piece of info 3",..., "piece of information N"]{{ '}' }}

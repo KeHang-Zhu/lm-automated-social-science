@@ -1,0 +1,33 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}", 
+and if the variable is not continuous, these explicit possible outcome levels: "{{ levels }}".
+After the scenario is completed, we are going to ask the following agents the following questions to get the values of the variable from the finished simulation: {{measurement_questions}}.
+Sometimes, agent specified for a question will be called 'oracle'.
+The 'oracle' is a pseudonym for an external party that can read the text transcript from the scenario and answer questions about it.
+We are going to aggregate the answers from these questions like this: {{measurement_aggregation}}
+There are some instances where there will be no values for variables after the simulation and the agents will be unable to answer the questions.
+For example, if the scenario is "negotiating to buy a car" and the variable of interest was "deal price" and a deal was not reached, then there's no possible deal price to report and the data will be missing
+We need you to identify if there are any situations where the data for "{{ variable_name }}" could be missing.
+What are the situations where data could be missing?
+A few important things to remember:
+1. It is possible that the data will not be missing, but we need you to check anyways.
+For example, if the scenario were "negotiating to buy a car" and the variable is "age of the buyer", then this data will never be missing because a buyer must have an age.
+2. The agents in the scenario will always be present, so you should not use "missing agent" as a reason why there could be missing data.
+3. Agents also have perfect memories, always answer honestly, and are forced to answer all questions.
+4. If the variable relates to an attribute of an agent like an agent's income or mood, the agent will always have data to provide to questions about the atrributes.
+5. The scenario will always begin.
+7. The transcription is always perfect and their are never recording errors.
+8. You should focus on if the variable will be available within one of the levels: {{ levels }}. 
+For example, if the scenario is "negotiating to buy a car" and the variable is "value to the seller" and the value to the seller is $0, this is not missing. The data would be 0.
+9. Even if the value of a variable is not available in the transrcipt, if the variable is about the agent, the agent will be able to provide data about the variable.
+10. If is not possible for the data to be missing, you should respond "data always present"
+11. You must keep the list of reasons why data is missing as short as possible while still being comprehensive.
+For example, if the scenario is "negotiating to buy a car" and the variable of interest was "deal price", the missing data situations should not be
+["the seller refused to part with the mug", "the buyer didn't want the mug"], but should just be inclusive of both: ["No deal was reached"]
+Respond with a json in the following format:
+{{ '{' }}"missing_data_situations": ["reason for potentially missing data 1", "reason for potentially missing data 2"],
+"explanation": "short explanation potentially missing data"{{ '}' }}

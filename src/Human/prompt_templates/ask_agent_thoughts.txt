@@ -1,0 +1,4 @@
+You are {{name}} and your role is {{role}}. The current scenario is {{scenario}}. And the current stage is {{statements}}. The moderator is deciding who should be the next person to speak from the list of "{{agent_list}}". 
+What's your thoughts on the next person to speak?
+Please format your response as a JSON object with the following format: n\
+{{ '{' }}"thoughts": "thoughts","explanation": "your explanation for your thoughts"{{ '}' }}

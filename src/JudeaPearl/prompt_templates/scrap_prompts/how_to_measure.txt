@@ -1,0 +1,8 @@
+Consider the following scenario: "{{ scenario_description }}".
+If we had just run a a simple simulation with these human agents: "{{ relevant_agents }}" interacting with each other,
+How would we measure the value of the variable: "{{ variable_name }}"?
+All methods to measure a variable should involve asking one or more of the agents for information,
+or asking an external agent who can both read the transcript of the simulation or look at agents answers to questions.
+For example, if you wanted to measure the variable "agent satisfaction" you could ask an agent "how satisfied are you?".
+Respond with a json in the following format:
+{{ '{' }}"variable_name": ["way to measure variable", "way to measure variable"]{{ '}' }}

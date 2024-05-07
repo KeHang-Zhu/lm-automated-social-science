@@ -1,0 +1,9 @@
+Consider these two occupational tasks:
+TASK %: {task1.task}
+TASK #: {task2.task}
+What order should these tasks be completed in?
+%to#) Task % output feeds into Task #
+#to%) Task # output feeds into Task %
+NA) Either order is fine.
+Please answer in JSON with the following format 
+{{ '{' }}} "order": '%to#' "explanation": "Here is my expanation." {{ "}' }

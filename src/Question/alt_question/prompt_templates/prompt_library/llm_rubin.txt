@@ -1,0 +1,7 @@
+Consider this occupational task
+TASK: {{task}}
+Rate how easy it is for a non-expert to tell if the task is done correctly.
+1  = Very easy for a non-export  
+10 = Only an expert would know if done correctly. 
+Answer in valid json with the following example format:
+{{ '{' }}"rating": 10, "explanation": "Designing nuclear subs is extremely demanding."{{ '}' }}

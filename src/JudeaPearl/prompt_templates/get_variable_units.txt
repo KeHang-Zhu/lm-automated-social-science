@@ -1,0 +1,19 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have just run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+What are the units of this quantity?
+You must make a definitive choice on the units of this quantity.
+The choice should be as concise as possible while still conveying the units.
+We are going to use this information for data analysis, so please answer according to how this data would be analyzed.
+A few cases to note:
+1. If the quantity is monetary, just "dollars" as the variable units.
+2. If the quantity is related to time, use "seconds" as the variable type.
+3. If the quantity is measured on a made up scale with numerical values, use "likert scale" as the variable units.
+4. If the quantity is the count of a quantity (like count of offers), use "count of <quantity>" as the variable units.
+5. If the quantity is an original category, like level of happiness: (low, medium, high), use "level of <category>" as the variable units.
+6. Otherwise, use your best judgment with cases 1 - 6 to guide your decision.
+Format your response as a json in this form for your response:
+{{ '{' }}"units": "choice of units",
+"explanation": "short explanation for choice or units"{{ '}' }}

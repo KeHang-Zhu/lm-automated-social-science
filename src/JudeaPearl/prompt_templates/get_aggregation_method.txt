@@ -1,0 +1,19 @@
+We have just run a simulation of the following scenario: "{{scenario_description}}", with the following human agents: {{relevant_agents}}
+and we are trying to extract data from the transcript of the simulation for analysis of this variable: {{variable_name}}.
+We know that the variable is a/an {{variable_type}} variable.
+We have the current mapping for measurements to data here: {{ level_value_dict }}
+We are using multiple measurements to operationalize this variable which we have already gathered as these numerical values: {{ measurements }}.
+The measurements are going to be aggregated like this: {{ aggregation_method }}
+Your tast is to pick the correct aggregation method for the combine this list of values {{measurements}} which we will directly use to combine the values of of the list into one data point to run regression on this variable.
+You must select an aggregation method from this list: ["sum", "max", "min", "mode", "average", "median"].
+A few things to consider:
+When selecting the way to combine the measurements
+1. You should choose "sum" if an only if the aggregation method is to sum all the measurements and do nothing else.
+2. You should choose "max" if an only if the aggregation method is to take the max of the measurements and do nothing else.
+3. You should choose "min" if an only if the aggregation method is to take the min of the measurements and do nothing else.
+4. You should choose "mode" if an only if the aggregation method is to find the mode of the measurements and do nothing else.
+5. You should choose "average" if an only if the aggregation method is to find the average of the measurements and do nothing else.
+6. You should choose "median" if an only if the aggregation method is to find the median of the measurements and do nothing else.
+Format your response as a json in this form :
+{{ '{' }}"aggregation":"choice of sum, max, min, mode, average, median",
+"explanation": "explanation for method{{ '}' }}

@@ -1,0 +1,18 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are running this simulation on a computer, so we need to determine how the agents will interact.
+There are 6 possible ways the agents can communicate and you must pick one of the 6 that makes the most sense for the scenario and the agents.
+Here is a list with the 6 options: ["ordered", "random", "center ordered", "center random", "oracle before", "oracle after"]
+We want the conversation to be as "real" as possible compared to a human conversation in the real world.
+No matter which option you choose, no agent will ever speak twice in a row.
+The 6 options can be described as follows:
+Ordered: The agents will speak in a predetermined order and continue repeatedly speaking in that order until the simulation is complete.
+For example, any conversation that is just back and forth between to people is ordered and the order is just one then the other.
+Random: The agents will speak in a random order until the simulation is complete, except that no agent will ever speak twice in a row.
+Center Ordered: There is one central agent and then all other agents. The non-central agents have an order, but the order alternates with the center agent.
+Center Random: There is one central agent and then all other agents. The center agent speaks every other time with a random non-central agent.
+Oracle Before: A 3rd party (called the oracle) determines who speaks next by looking at the transcript of what the agents have said so far after each speaker.
+Oracle After: After each agent speaks, all the agents respond, but only a 3rd party (called the oracle) can see what they say. Then, the oracle chooses which agent's response to make "real". Then all other agents responses are deleted in that round.
+Respond with a JSON in the following format:
+{{ '{' }}"interaction_type": choice of interaction type from list,
+"explanation": "explanation for interaction type"{{ '}' }}

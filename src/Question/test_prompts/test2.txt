@@ -1,0 +1,4 @@
+Consider the following scenario: {{ scenario_description }}
+What are some outcomes we could measure about this scenario?
+Provide the outcomes in a python list like this:
+['outcome1', 'outcome2']

@@ -1,0 +1,9 @@
+We are interested in know if this variable: "{{ variable_name }}", is in this list of variables: {{ list_to_check }}?
+The names don't have to match exactly in order for the variable to be in the list, the wording just has to mean the same thing.
+If the variable is in the list, please respond with with "True" and with the name of the variable in the list that it matches. 
+If it's not in the list, respond "False" and leave the name of the match as blank.
+Please respond with JSON in the following format if the variable is in the list:
+{{ '{' }}"in_list":"True or False",
+"name_of_variable": "{{ variable_name }}",
+"name_of_match": "name of the variable that it matches if it's in the list. Otherwise blank"
+"explanation": short explanation for decision{{ '}' }}

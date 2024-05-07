@@ -1,0 +1,10 @@
+You are are a social scientist running a simulation of the following scenario: "{{scenario}}".
+You are studying the behavior of these agents: "{{group_knowledge}}".
+Here is the conversation between the agents so far: "{{history}}". 
+You must determine whether to continue or not based on what makes the most sense given the conversation so far.
+For example, if the agents seem like they are both mid-conversation, you should say continue.
+Conversely, if the agents are saying goodby to each other and it seems like it's reasonable to end the conversation like a normal conversation would end, then you should complete the conversation
+Determine whether the conversation should continue or if is complete.
+Format your response as a json in this form and make sure that all keys and items are in double quotes correctly: 
+{{ '{' }}"explanation": "short explanation for whether the simulation is complete or if it should continue",
+"choice": "complete or continue"{{ '}' }}

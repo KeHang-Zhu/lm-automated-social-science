@@ -1,0 +1,7 @@
+You are an oracle to decide the sequence of people's talking. The current scenario is "{{scenario}}". And the current stage is "{{statements}}". 
+You ask each agent's thoughts at current situation as follows "{{agent_thoughts}}"
+You need to decide one person to talk next. Select an agent "{{agent_list}}". 
+You cannot choose the same person to speak twice in a row. For example, if you choose 1 last time, you must not choose 1 this time. 
+Each person should have equal chance to be selected.
+Please format your response as a JSON object with the following format: 
+{{ '{' }}"explanation": "your explanation for your choice", "choice_of_next_agent": "choice"{{ '}' }}

@@ -1,0 +1,17 @@
+In the following scenario: "{{ scenario_description }}",
+Who are the individual human agents in a simple simulation of this scenario?
+The agents should have specified roles.
+For example, if the scenario was "negotiating to buy a car", then the agents should not be ["person 1", "person 2"], but should be ["seller", "buyer"]
+Only include agents that would speak during the scenario.
+Respond with a list of individual human agents, with the roles as their titles.
+Do not include a plurality of agents as a single agent in the list.
+Evey item in the list must be a singular agent, even if this makes the list long.
+For example, if the scenario was "a criminal case" the correct list of roles would be:
+["judge", "defendant", "prosecutor", "defense attorney", "juror 1", "juror 2"]
+And the following would be incorrect: 
+["judge", "defendant", "lawyers", "jurers"]
+You should respond with a python list as displayed in the correct example.
+You must generate at least two agents.
+Respond with a JSON in the following format:
+{{ '{' }}"agents": ["agent 1", "agent 2", "agent 3", "agent 4"],
+"explanation": "short explanation for choice of agents"{{ '}' }}

@@ -1,0 +1,60 @@
+outcome_generator1:
+  - |
+    Consider the following scenario: {{ scenario_description }}
+    What are some outcomes we could measure about this scenario?
+    Provide them in a list with each outcome separated by a semi-colon.
+    Do not include any other text in your response.
+outcome_generator2:
+  - |
+    Consider the following scenario: "{{ scenario_description }}".
+    We have already considered the following outcomes: {{ outcomes }}.
+    Can you give us some more outcomes we could measure about this scenario?
+    Provide them in a list with each outcome separated by a semi-colon.
+    Do not include any other text in your response.
+outcome_cause_dict1:
+  - |
+    Consider the following scenario: "{{ scenario_description }}"
+    We are interested in this outcome pertaining to the scenario: {{ outcome }}.
+    What are some potential causes of this outcome?
+    These causes should not be explicitly directional. 
+    For example, if the scenario is "negotiating to buy a car", and the outcome is "final price of the car", 
+    then a cause should not be "strong buyer negotiating", but should be "buyer negotiating skills"
+    Additionally, causes should refer to a single agent in the scenario and not a group of agents.
+    For example, if the scenario is "negotiating to buy a car", and the outcome is "final price of the car", 
+    then a cause should not be "the value of the car for each person", but should be "the value of the car for the buyer" or "the value of the car for the seller".
+    Provide them in a list with each outcome separated by a semi-colon.
+    Do not include any other text in your response.
+outcome_cause_dict2:
+  - |
+    Consider the following scenario: "{{ scenario_description }}"
+    We are interested in this outcome pertaining to the scenario: {{ outcome }}.
+    We have already considered the following causes: {{ causes }}.
+    Can you give us some more causes that could lead to this outcome?
+    These causes should not be explicitly directional. 
+    For example, if the scenario is "negotiating to buy a car", and the outcome is "final price of the car", 
+    then a cause should not be "strong buyer negotiating", but should be "buyer negotiating skills"
+    Provide them in a list with each outcome separated by a semi-colon.
+    Do not include any other text in your response.
+json_dag_generator:
+  - |
+    Consider the following scenario: "{{ scenario_description }}" 
+    We are interested in this outcome pertaining to the scenario: {{ outcome }}.
+    We believe that the following causes could explain this outcome: {{ causes }}.
+    Provide a directed acyclic graph that represents the causal relationships between the causes and outcome?
+    The graph should be in the following format:
+    Create a json file that represents the DAG with the following format:
+    {
+    "variable_name1: {
+              "children": ["variable_name2", "variable_name3"]
+              },
+    "variable_name2": {
+              "children": ["variable_name4"]
+              },
+    "variable_name3": {
+              "children": ["variable_name4"]
+             },
+    "variable_name4": {
+              "children": []
+            }
+    }
+    Do not include any other text in your response.

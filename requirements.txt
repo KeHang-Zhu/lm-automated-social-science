@@ -1,0 +1,33 @@
+numpy == 1.25.0
+pyyaml == 6.0
+openai==0.27.8
+langchain
+python-dotenv == 1.0.0
+seaborn   
+click == 7.1.2
+questionary
+pypdf2
+scipy == 1.11.4
+termcolor
+tiktoken == 0.3.3
+tenacity == 8.2.2
+requests == 2.31.0
+pandas == 2.1.4
+tqdm == 4.65.0
+ipython
+scikit-learn == 1.3.2
+plotly
+semopy == 2.3.10
+replicate == 0.10.0
+jinja2 == 3.1.2
+networkx == 3.1
+retrying ==  1.3.4
+
+## Typer
+typer==0.3.2 
+colorama==0.4.4 
+shellingham==1.4.0
+
+## Test
+pytest==6.2.4
+

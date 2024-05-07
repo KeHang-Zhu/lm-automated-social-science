@@ -1,0 +1,14 @@
+{"'the price of the snow shovel'": EndogenousVariable:
+template_dir: /Users/wonderland/Desktop/2023Fall/robot_scientist/src/./JudeaPearl/prompt_templates
+name: 'the price of the snow shovel'
+scenario_description: A person who cares a lot about fairness at a store buying a snow shovel after a snowstorm
+agents_in_scenario: ['fairness-concerned customer', 'store cashier']
+operationalization_dict: {'operationalization': 'the price of the snow shovel is a continuous variable that is the final amount of money exchanged from the customer to the cashier for the snow shovel.', 'method_to_obtain_quantity': "the quantity is obtained by recording the final price mentioned in the conversation between the customer and the cashier. if the final price is not explicitly mentioned, the cashier will be asked the question 'what was the final price of the snow shovel?' after the scenario has completed."}
+variable_type: continuous
+units: dollars
+levels: ['0-10', '11-20', '21-30', '31-40', 'above 40']
+agent_measure_question_dict: {'store cashier': ['what was the final price of the snow shovel?']}
+measurement_aggregation: the answer to the question will be the value of the variable. since the variable is continuous and measured in dollars, the answer will be directly used as the value of the variable without any further processing or aggregation.
+descendant_outcomes: []
+possible_covariates: []
+causes: ['price of buyer']}

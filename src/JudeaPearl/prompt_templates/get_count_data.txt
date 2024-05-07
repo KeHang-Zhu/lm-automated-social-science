@@ -1,0 +1,10 @@
+We have just run a simulation of the following scenario: "{{scenario_description}}", with the following human agents: {{relevant_agents}}
+and we are trying to extract data from the transcript of the simulation for analysis of this variable: {{variable_name}}.
+We know that the variable is a count variable.
+We have asked this agent: {{agent}}, the following question to get the results: {{question}}.
+The agent has provided this answer: {{answer}}.
+Your task is to extract whole number numerical response from the answer so we can run a regression on the results of our simulation.
+Please extract only the number (which we will convert directly into a float) or response with "NA" if the data is missing.
+Format your response as a json in this form :
+{{ '{' }}"answer":"count data or NA",
+"explanation": "short explanation for extraction of value{{ '}' }}

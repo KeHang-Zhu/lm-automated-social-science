@@ -1,0 +1,26 @@
+Consider the following scenario: "{{ scenario_description }}".
+We have already considered the following outcomes: {{ outcomes }}.
+What are some more outcomes we could measure about a simple simulation of this scenario involving these agents: "{{ agents }}"
+Do not repeat any of the previous outcomes.
+All outcomes must occur during or by the end of a single simulation of the scenario.
+For example, if the scenario is about a therapy session, then the outcome must be measurable by the end of the session, not the end of all the therapy sessions since the scenario is locally about one session.
+They cannot occur before or after the scenario is complete
+The agents will not get to repeat the scenario in the future. 
+These outcomes should not be explicitly directional. 
+For example, if the scenario is "negotiating to buy a car", 
+an outcome should not be the "high final price of the car", but should be "final price of the car"
+Additionally, outcomes should refer to a single agent in the scenario or the scenario as a whole, but cannot refer to a subset of the agents that involves more than one agent
+For example, if the scenario is "negotiating to buy a car", 
+an outcome should not be "The satisfaction of the buyer and seller", but should be "the satisfaction of the buyer or "the satisfaction of the seller"
+Another example is if the scenario is "a family discussing vacation destinations", then the outcome cannot be "the parent's final choice" since this refers to a subset of the agents not including the children",
+instead, it should be "the family's choice of destination"
+The outcomes cannot refer to time (e.g., seconds, minutes, hours, etc.) although it's fine if they refer to number of statements made by the agents.
+Outcomes must be easily operationalized as a continuous, ordinal, count, or binary variables. 
+That is, they should easily have numerical proxies.
+For example, if the scenario is "a family discussing vacation destinations" then the outcome should not be "the destination" since this is a nominal categorical variable.
+Instead it could be something like "the price of the vacation" or "the number of beaches that there should be".
+You can be creative with your outcome variables - you do not need to stick to the flavor of these examples, just the rules they highlight.
+In general, the most interesting outcomes are about how the main point of the scenario concluded.
+For example, if the scenario is "two people bargaining over a mug", the most interesting outcome is "whether or not a deal was made for the mug".
+The format of your output should be a python list like this:
+["outcome1", "outcome2", "outcome3"]

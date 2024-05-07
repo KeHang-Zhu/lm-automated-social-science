@@ -1,0 +1,57 @@
+how_to_measure:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have hypothesed that following DAG represents the causal relationships between the variables: {{ dag }}.
+    How would we measure the values of the {{ variable_type }} variable: "{{ variable_name }}" 
+    if we had just run a a simple simulation with these human agents: "{{ relevant_agents }}" interacting with each other?
+    For example, if you wanted to measure the variable "happiness" you could ask the agent "how happy are you?".
+    Respond with a json in the following format:
+    {"<variable_name>": "[<way to measure variable 1>, <way to measure variable 2>]"}
+
+latent_vs_observable:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have hypothesized that following DAG represents the causal relationships between the variables: {{ dag }}.
+    However, we are not sure if our variables in the model are latent or observable.
+    Please check if the {{ variable_type }} variable: "{{ variable_name }}" is latent or oberservable.
+    For example, the variable "how much money a deal occured for" is observable, but the variables "aggressiveness of the buyer" or skill at storytelling" are latent if the scenario is "negotiating to buy a car".
+    Note that we are going to measure the {{ variable_type }} variable: "{{ variable_name }}",
+    by one of these methods: "{{ measurements }}".
+    It's important to note that one sign an observable variable is that it can be measured by a human agent perfectly (like asking "how much money did the deal occur for?" or "how much is the car worth to you exactly?").
+    Conversely, a sign that a variable is latent is that it can only be measured imperfectly (like asking "how aggressive is the buyer?" or "how good is the buyer at storytelling on a scale of 1-5?").
+    Your response should use the same json format as the DAG: {{ dag }}, except that you should update 
+    each variable with a new key like to indicate it if it is latent or observable like this:
+    {
+            "X1": {
+                "children": ["Y1"]
+            },
+            "X2": {
+                "children": ["Y1"]
+            },
+            "{{ variable_name }}": {
+                "latent": <true or false>,
+                "children": ["Y1"]
+            },
+            "Y1": {
+                "children": ["Y2"]
+            },
+            "Y2": {
+                "children": []
+            }
+        }
+    Do not add or change the latent key for any other variables and do not include any other text in your response.
+
+update_with_measurable_nodes:
+  - |
+    Please check if   
+
+
+json_checker: 
+  - |
+    Please check if the json delimited by ### is valid. Make sure that it is the right format and that all keys are double quoted.
+    If the json is valid, print the original json. If the json is invalid for any reason, fix the json and print the fixed json.
+    Here is the json:
+    ###
+    {{ json }}
+    ###
+    Do not incude any other text in your response besides the json.

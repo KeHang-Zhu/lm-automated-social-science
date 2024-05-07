@@ -1,0 +1,11 @@
+openai
+seaborn
+pandas
+numpy
+matplotlib
+langchain
+scipy
+statsmodels
+click
+pygraphviz
+networkx

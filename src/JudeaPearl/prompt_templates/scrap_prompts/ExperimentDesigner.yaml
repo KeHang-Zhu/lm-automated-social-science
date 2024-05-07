@@ -1,0 +1,62 @@
+ get_human_actors:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have identified the following DAG of causal relationships between variables: "{{ dag }}"
+    Who are the individual human agents in this scenario? They should have specified roles.
+    Respond with a list of inidividual human agents, with the roles as their titles, separated by a semi-colon.
+    For example, if the scenario was "a criminal case" the correct response would be:
+    judge; defendant; prosecutor; defense attorney; jurer 1; jurer 2;
+    And the following would be incorrect: 
+    judge; defendant; lawyers; jurers
+get_agent_info:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have identified the following DAG of causal relationships between variables: "{{ dag }}".
+    We have also identified the following individual human agents: "{{ human_agents }}" relevant to the DAG and scenario.
+    What information do we need to know about each agent if we are running an experiment to test the DAG.
+    Please only include information that will be explicitly relevant to the DAG.
+    Respond with a json in the following format:
+    {"agent_name1": ["information1", "information2", "information3"],
+     "agent_name1": ["information1", "information2", "information3"]}
+get_agent_info_alt:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have identified the following DAG of causal relationships between variables: "{{ dag }}".
+    We have also identified the following individual human agents: "{{ human_agents }}" relevant to the DAG and scenario.
+    We are going to run a simulated experiment where we instantiate each agent as a large language model.
+    We want to provide each relevant agent with the minimum possible information so that they can successfully simulate the experiment.
+    We are then going to adjust the information we provide to each agent to see how it affects the outcome of the experiment relevant to the DAG.
+    What information do we need to know about each agent if we are running an experiment to test the DAG?
+    Please only include information that will be explicitly relevant to the DAG.
+    Respond with a json in the following format:
+    {"agent_name1": ["information1", "information2", "information3"],
+     "agent_name1": ["information1", "information2", "information3"]}
+vary_agent_info:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have identified the following DAG of causal relationships between variables: "{{ dag }}".
+    We have also identified the following individual human agents: "{{ human_agents }}" relevant to the DAG and scenario.
+    We are going to run a simulated experiment where we instantiate each agent as a large language model.
+    We are going to endow each agent with the following information: "{{ agent_info }}" to see how it affects the outcome of the experiment to test the DAG.
+    How should we vary the information we provide to each agent for different simulations of the experiment?
+    For example, if we wanted to test how emotion affects the outcome of the experiment, we could vary the emotion of each agent.
+    The emotion variable would always be an attribute of the agent, but it's value would be varied.
+    We will only vary information that can be adjusted before the experiment is run.
+    For example, we will not vary the information that is learned during the experiment (like varying how happy the agent is after the experiment is run).
+    It may be that some agents do not need to have any of their information varied.
+    Please only include information that will be explicitly relevant to the DAG.
+    
+check_variables_measured:
+  - |
+    In the following scenario: "{{ scenario_description }}",
+    We have identified the following DAG of causal relationships between variables: "{{ dag }}".
+    We have also identified the following individual human agents: "{{ human_agents }}" relevant to the DAG and scenario.
+    We have the following information about each agent: "{{ agent_info }}" that is necessary to run an experiment to test the DAG.
+    Does the information for each agent map to a variable in the DAG?
+    Respond with a json in the following format:
+    {"agent_name1": {"variable_name1": [relevant_information1, relevant_information2, relevant_information3],
+                      "variable_name2": [relevant_information1, relevant_information2, relevant_information3]},
+     "agent_name2": {"variable_name1": [relevant_information1, relevant_information2, relevant_information3],
+                      "variable_name2": [relevant_information1, relevant_information2, relevant_information3]}
+    "missing_information": ["variable_name3", "variable_name4"]}
+    }

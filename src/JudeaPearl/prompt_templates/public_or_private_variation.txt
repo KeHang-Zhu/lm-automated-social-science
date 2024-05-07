@@ -1,0 +1,28 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is a/an {{ variable_type }} variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We are trying to measure the effect of changing {{ variable_name }} on the following variable(s): {{ descendant_outcomes }}.
+We are going to do this by exogenoulsy manipulating the this attribute: {{ attribute_name }} for this agent: {{ agent }}.
+In each iteration of the simulation, we will endow one of these values: {{attribute_values}} for the {{ attribute_name }} of the {{agent}},
+so we can see the causal effect of changing {{ variable_name }} on the following variable(s): {{ descendant_outcomes }}.
+Your task is to determine if the value of this attribute should be known to all agents in the scenario, or just the {{agent}}, whom it's about.
+A few things that you should consider when determining if the attribute should be public or private:
+1. You should make this decision for what makes the most sense in the context of the scenario.
+For example, if the scenario is "two people bargaining over a mug", the agents are "the buyer" and "the seller", 
+and the attribute to be varied is "the buyer's reservation price", then we would want the buyer's reservation price to be private, because the buyer would want to keep that secret in the real world to get a better deal.
+However, if the scenario was "a judge determining bail for a defendant" and the agents were "a judge", "defendent", "prosecutor", and "attorney", and the 
+and the attribute to be varied is "the defendent's crime", then we would want this information to be public since obviously everyone in the case would know the crime that was being argued over.
+2. If the attribute will be visible or obvious to everyone, then it should be public.
+For example, if the attribute is the "the clothes of one of the agent", then this should be public assuming that all the agents are in the same room.
+Please determine if the attribute should be public or private in the scenario.
+Additionally, if you determine that the attribute should be public, then please select what to call the attribute for the agents whom it does now directly apply to. 
+For example, in the "a judge determining bail for a defendant" scenario, if the attribute for the defendent is "your crime", 
+then we would want to share this information publicly with the other agent's by calling the attribute "the crime of the defendent."
+If
+Respond with a JSON in the following format
+{{ '{' }}"choice":"public or private",
+"public_name":"name of attribute to be shared or say 'private'"
+"explanation": "short explanation for choice of public or private{{ '}' }}

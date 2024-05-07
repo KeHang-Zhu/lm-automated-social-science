@@ -1,0 +1,27 @@
+Consider the following scenario: "{{ scenario_description }}".
+We are going to run a simple simulation of this scenario multiple times with these human agents: "{{ relevant_agents }}" interacting with each other.
+Explicitly, we are interested in how the following causes: "{{ causes }}" affect these outcomes variables: {{outcomes}}.
+In each round of the simulation, we are going to vary one value of one of the causes to perform a perfectly randomized experiment to determine the causal effects of the varied cause on the outcomes.
+Here is a python dictionary the specifies the variation that we will induce in each of the causes: {{ varied_attribute_dict }}.
+The dictionary is structured such that each main key is the name of a cause, with values that are also dictionaries.
+In each of these subdictionaries is the attribute for a given agent that will be varied along a corresponding list of values.
+These varied values are the variations in the experiment and they are the most important pieces of information for each of the agents.
+However, the agents will need other information to realistically participat in the simulation.
+We need to generate the minimum amount of necessary background information to tell the agents so that they can participate in the scenario and we create the appropriate experiment to actually test the relationship between the causes and the outcomes.
+We will determine this for one agent at a time and are going to determine it for this agent right now {{ agent }}
+We have determined that the goal of the {{ agent }} is: {{ goal }}.
+The {{ agent }} faces this constraint: {{ constraint }}.
+We have some additional attributes that we are giving to the agents, but we need help determining their values.
+These pieces of information need values for the agent: {{ necessary_info }};
+For each of these pieces of information, please generate one plausible value for each of them.
+Some important things to keep in mind:
+1. Make sure that the pieces of the information are in the correct tense to be directly provided to the agent.
+2. Please make sure that none of the values give the agent a first name.
+3. You must make sure that these values make sense for each attribute, but also that they make sense with each other.
+For example, if the scenario is "an auction" and the agent is "a bidder",
+then if two of the pieces of information are "the starting bid" and "the bidder's budget", then the starting bid should probably be lower than the bidder's budget or else the bidder will never bid.
+4. It is especially important that the values the additional attributes {{necessary_info}} do not conflict with any of the possible values for the varied attributes in the dictionary of varied attributes since these are the parameters if the simulation we are most interested in.
+Respond with a JSON in the following format and make sure that each string is in double quotes:
+{{ '{' }}"explanation": "explanation of each piece of information",
+"information": {{ necessary_info }},
+"values": ["list of values for each attribute in the same order as the attributes"]{{ '}' }}

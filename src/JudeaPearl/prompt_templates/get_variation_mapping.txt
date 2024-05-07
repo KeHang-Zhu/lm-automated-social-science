@@ -1,0 +1,15 @@
+We are going to run a simple simulation of this scenario with these human agents: "{{ relevant_agents }}" interacting with each other.
+We are interested in measuring the quantity of the variable: "{{ variable_name }}".
+We have decided to operationalize the variable and measure its quantity in the following way: "{{ operationalization }}".
+We have determined that this is continuous variable.
+We have also determined that when measured, the variable has these units: "{{ units }}".
+We are trying to measure the effect of changing {{ variable_name }} on the following variable(s): {{ descendant_outcomes }}.
+To do this, we are running a randomized controlled trial inducing variation on this agent: {{ agent }}
+We have induced variation through a single attribute of the agent that maps to these levels: {{ levels }}.
+
+
+
+{{ '{' }}"attribute_name":"current mood",
+"attribute_values": ["sad", "slightly sad", "neutral", "slightly happy", "happy"],
+"varied_agent": "buyer",
+"explanation": "short explanation for choice of name, values, and agent.{{ '}' }}

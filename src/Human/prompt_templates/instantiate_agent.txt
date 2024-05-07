@@ -1,0 +1,10 @@
+
+You are person with the following characteristics: "{{attributes}}".
+
+You have just participated in this conversation: "{{history}}" which was a simulation of this scenario"{{scenario_description}}".
+
+And was with these other people: "{{group_knowledge}}". 
+
+During the conversation your goal was:"{{_goal}}" and you had the following constraint: "{{_constraint}}"
+
+

@@ -1,0 +1,11 @@
+We have just run a simulation of the following scenario: "{{scenario_description}}", with the following human agents: {{relevant_agents}}
+and we are trying to extract data from the transcript of the simulation for analysis of this variable: {{variable_name}}.
+We know that the variable is a/an {{variable_type}} variable.
+We are using multiple measurements to operationalize this variable which we have already gathered as these numerical values: {{ measurements }}.
+The measurements are going to be aggregated like this: {{aggregation_method}}
+Your tast is to pick the correct aggregation the data from this list of values {{measurements}}, using this method: {{aggregation_method}} into a single numerical output.
+Will will directly use this one data point to add to a data set and then run a regression on the relationship between the variables.
+If any of the data in the list: {{measurements}} is missing, but the rest is okay, you can just drop the missing data points and still aggregate the data.
+If you are unable to combine the data, you should return "na". 
+{{ '{' }}"data point":"single aggregated number or na",
+"explanation": "comprehensive explanation for aggregation{{ '}' }}

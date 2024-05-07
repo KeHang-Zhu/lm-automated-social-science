@@ -1,0 +1,7 @@
+Consider this occupational task
+TASK: {{task}}
+How helpful would a large language model like GPT4 be with the completion of this task?
+1 = Not helpful at all
+10 = The model could do this task entirely on its own.
+Answer in valid json with the following example format:
+{{ '{' }}"rating": 5, "explanation": "This task is easy to assess because it is a binary classification task."{{ '}' }} 
