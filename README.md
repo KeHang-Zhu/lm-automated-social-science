@@ -34,22 +34,19 @@ If you are interested in knowing more about and exciting research field of LLMs 
 
 ## Disclaimers IMPORTANT!!!! PLEASE READ BEFORE USING!!!
 
-- These instructions will be a lot easier to read if you have at least skimmed the paper.
-- This code system is not perfectly robust, and it can generate unexpected errors. But we want to share what we did. The main point is for people to understand the process in the paper.
-- If you run into problems, create an issue, and we will try to help you out or at least respond with an explanation for why it doesn't work.
-- If you try and run everything from end-to-end, it can take a substantial amount of time. We have parallelized as much as we can, but the entire process from hypothesis generation to data analysis can take as much as three hours (e.g., the auction simulations in the original paper). This also does not account for when the system breaks, which it sometimes does unfortunately.
-  - It can also cost several hundred dollars! So please be careful before launching hundreds of in silica simulations if you don't have any money in your Openai account that you aren't willing to burn.
-- With this in mind, we have made the process more interactive such that the user will approve the different phases of the scientific process to minimize errors and keep the in the know about how the system progresses.
- - Of course, the most exciting part of the paper is the automation from start to finish, so we provide guidance on usage with the above warning for reasonably long wait times (hours), possible errors, and financial costs.
- - Note that if you only use 1 or 2 causes, the system shouldn't take too long or be too expensive. Once you get to 3+, though, the number of simulations increases nearly factorially. Hence the time-long wait times and expenses.
+- It is highly recommended that readers at least skim the paper prior to engaging with these instructions
+- While we have made efforts to ensure the robustness of the code system, it is not infallible and may occasionally generate unexpected errors. Our primary goal is to share our methodology and provide clarity on the process outlined in the paper.
+- In the event that you encounter issues, please create an issue, and we will try to assist you or, at the very least, provide an explanation for the system's shortcomings.
+- Running the entire process from end-to-end can be a time-consuming, potentially taking up to three hours, as exemplified by the auction simulations in the original paper.
+- It is crucial to note that the process can incur substantial costs, potentially amounting to **several hundred dollars**. Please exercise caution before initiating numerous in silica simulations if you do not have sufficient funds in your OpenAI account that you are willing to allocate.
 
 Some potential system failures that we expect some people to run into that we cannot preemptively solve are:
 
-- OpenAI rate-limit errors. We have built in a lot of rate limiting, but depending our your specific account details, the system can stall.
-- If the experiment didn't induce variation in the outcome, the system will be unable to estimate an SCM. For example, if your scenario is about two people bargaining and they never make a deal. Lavaan, the package we use for estimation, produces an error unless all variables have variance > 0. What this really means is that the experiment failed quite literally---the causes did not affect the outcome! Even if this happens the system will still output a `data.csv` where you can see that the outcome had 0 variance.
-- Another related problem can occur if the outcome is conditional and never happens. In the bargaining scenario, if the outcome is the final price of a deal and a deal is never made, then the same error will occur as the previous.
-- The LLM generating the SCM simply gives a bad response. While we have many checks in the system to avoid this, if the temperature to the "scientist" portion of the system is above zero, this can sometimes just happen and we do not have a method to perfectly check every possible natural language edge-case.
-- In our experience, the system executes an experiment without an error roughly 70% of the time. Usually, just rerunning the process should solve most problems.
+- OpenAI Rate-Limit Errors: Extensive rate limiting has been implemented within the system; however, depending on the specific account details, the system may experience stalling.
+- Lack of Outcome Variation: If the experiment fails to induce variation in the outcome, the system will be unable to estimate a Structural Causal Model (SCM). For instance, in a scenario involving two individuals engaged in bargaining, if they never reach an agreement, Lavaan, the package utilized for estimation, will generate an error unless all variables have a variance greater than zero. Fundamentally, this signifies that the experiment has failed, as the causes did not influence the outcome. Even in such cases, the system will still generate a `data.csv` file, which will reveal that the outcome had zero variance.
+- Conditional Outcome Never Occurs: A related issue may arise if the outcome is conditional and never materializes. In the bargaining scenario, if the outcome is defined as the final price of a deal, and no deal is reached, the same error will occur as described in the previous point.
+- Suboptimal LLM-Generated SCM: The LLM)generating the SCM may occasionally provide an inadequate response. Although numerous checks have been integrated into the system to mitigate this, if the temperature of the "scientist" portion of the system exceeds zero, this issue may sporadically occur, and there is no perfect method to verify every possible natural language edge case.
+- System Execution Success Rate: Based on our experience, the system successfully executes an experiment without encountering an error approximately 70% of the time. In most cases, rerunning the process should resolve the majority of issues.
 
 <!-- - PyPI: ... -->
 <!-- - Documentation:  -->
@@ -66,19 +63,14 @@ A scenario is a simple natural language sentence describing multiple people inte
 
 ### Important features of input scenarios
 
-If your social scenarios stay in line with the following, they will be more likely to succeed. None of these features is absolutely necessary, but in our experience simulating these expeirments, your ideas will be much more likely to succesfully run if you follow these token rules:
+To increase the likelihood of success for your social scenarios, it is advisable to adhere to the following guidelines. While none of these features is strictly mandatory, our experience in simulating these experiments suggests that your ideas will have a significantly higher probability of successful execution if you comply with these token rules:
 
+- Social scenarios should generally make reference to a minimum of two individuals. The system consistently attempts to generate two or more agents for the simulations; therefore, if your scenario does not implicitly refer to at least two people, it may not function as intended. For example, "a person playing solitaire in her room alone while crying" would not be considered an appropriate "social" scenario.
 
-- Social scenarios must generally reference at least two people. The system always tries to generate 2+ agents for the simulations, so if your scenario does not even implicitly reference 2+ people, it may not work.
-   - e.g., "a person playing solitaire in her room alone while crying" would not be a good "social" scenario.
-- In general, using social scenarios like those we have described above are good. Some features that work well with the system relevant to our examples are: 
-   - Clear references to who the agents will be in the simulations.
-   - Obvious quantifiable outcomes and causes.
-- **IMPORANT**: The social scenario should be about some topic that can be accomplished only through exchanging text. If the scenario is "3 people building a tower" and the outcome is "whether the tower was built," the tower may never be built since, well, LLMs don't build towers (yet).
-
-Here are a few more examples of simulations that we have successfully completed. Notice the consistency with the above instructions:
-- A family arguing whether to get thai food or indian food for dinner.
-- Two phd students discussing how many sections to add to their new paper.
+- Employing social scenarios similar to those in the paper is generally effective. Certain features that align well with the system, as demonstrated in our examples, include:
+  - Clear identification of the agents who will participate in the simulations.
+  - Easily quantifiable outcomes and causes.
+- **IMPORTANT**: The social scenario should revolve around a topic that can be accomplished solely through the exchange of text. If the scenario involves "3 people building a tower" and the outcome is "whether the tower was built," there is a risk that the tower may never be constructed since, at present, Language Models (LLMs) do not possess the capability to physically build towers.
 
 ## Getting started
 
