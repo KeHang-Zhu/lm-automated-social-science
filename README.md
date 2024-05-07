@@ -1,4 +1,4 @@
-# Automated Social Science: Automated Social Science: Language Models as Scientist and Subjects
+# Automated Social Science: Language Models as Scientist and Subjects
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
