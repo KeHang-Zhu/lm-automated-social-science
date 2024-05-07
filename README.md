@@ -3,7 +3,7 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Disclaimers](#disclaimers-important-please-read-before-using)
+2. [Disclaimers](#disclaimers-please-read-before-using)
 3. [Social Scenarios](#what-is-a-social-scenario)
 4. [How to use](#getting-started)
 5. [Outputs](#output-structure)
@@ -32,7 +32,7 @@ If you make use of this code in any formal way, we would appreciate a citation:
 
 If you are interested in knowing more about and exciting research field of LLMs and social science, there is a repo tracking the recent literature in this field: https://github.com/KeHang-Zhu/Awesome-LLM-for-Social-Science
 
-## Disclaimers IMPORTANT!!!! PLEASE READ BEFORE USING!!!
+## Disclaimers--Please Read Before Using
 
 - It is highly recommended that readers at least skim the paper prior to engaging with these instructions
 - While we have made efforts to ensure the robustness of the code system, it is not infallible and may occasionally generate unexpected errors. Our primary goal is to share our methodology and provide clarity on the process outlined in the paper.
