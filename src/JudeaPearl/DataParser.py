@@ -263,7 +263,13 @@ class DataParser(PromptMixin, LLMMixin, RegisteredSerializable):
         if answer == "na":
             return np.NaN
 
-        return float(answer) if variable.variable_type == "continuous" else int(answer)
+        # if there are any problems parsing the data, just return nan so that the code compiles
+        try:
+            return (
+                float(answer) if variable.variable_type == "continuous" else int(answer)
+            )
+        except ValueError:
+            return np.NaN
 
     @retry_on_keyerror_decorator
     def get_aggregation_method(self, variable: Variable, measurements: List) -> Dict:
@@ -385,41 +391,6 @@ class DataParser(PromptMixin, LLMMixin, RegisteredSerializable):
                 result = future.result()
                 if result is not None:
                     self.data_frame.loc[len(self.data_frame)] = result
-
-    # USE THIS FUNCTION TO DEBUG - NON PARALLELIZED VERSION
-    # # @retry_on_keyerror_decorator
-    # #retry 3 times if value not there!???
-    # def get_data_from_interactions(self) -> pd.DataFrame:
-    #     '''
-    #     This function takes the interaction data and returns a pandas dataframe with the data from the survey questions.
-
-    #     Args:
-    #         None
-    #     '''
-    #     for interaction_num in self.interaction_data.keys():
-    #         print(interaction_num)
-    #         # skip if empty for some reason
-    #         if not self.interaction_data[interaction_num]:
-    #             continue
-    #         survey = self.interaction_data[interaction_num]['survey']
-
-    #         single_observation = {}
-
-    #         for var_name in self.attribute_value_mapping[interaction_num].keys():
-    #             data_single = self.exogenous_data_parse(var_name, interaction_num)
-    #             single_observation[var_name] = data_single
-
-    #         for var_name in survey.keys():
-    #             # if multiple questions per variable (still only one per agent!)
-    #             if self._check_multiple_question_per_measure(survey[var_name]):
-    #                 data_single = self.aggregate_multiple_data(var_name, survey)
-    #                 single_observation[var_name] = data_single
-    #             # only one question to be answered per variable
-    #             else:
-    #                  single_observation[var_name] = self.parse_single_question_per_measure(var_name, survey)
-
-    #         self.data_frame.loc[len(self.data_frame)] = single_observation
-    #         print(self.data_frame)
 
     def gather_meta_data(self) -> Dict:
         """
